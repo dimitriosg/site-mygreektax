@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dimitriosg/site-mygreektax
   branch: main
-  base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
+  base_url: https://cms-oauth-worker.dimitriosg2002.workers.dev
 
 # Set to false once the OAuth Worker (base_url above) is deployed and the
 # GitHub OAuth App callback URL is configured. Until then, local development
