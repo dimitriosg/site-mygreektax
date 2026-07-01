@@ -1,0 +1,212 @@
+---
+---
+     The PDF path is already set to /blog/guides/The_Expats_Greek_Tax_Calendar_2026.pdf
+     ════════════════════════════════════════════════════════════════════ -->
+<div id="mgt-pop" class="mgt-pop" role="dialog" aria-modal="true" aria-labelledby="mgt-pop-title" aria-hidden="true">
+  <div class="mgt-pop__backdrop" data-mgt-close></div>
+  <div class="mgt-pop__card" role="document">
+    <button class="mgt-pop__x" type="button" aria-label="Close" data-mgt-close>&times;</button>
+
+    <!-- FORM STATE -->
+    <div class="mgt-pop__body" id="mgt-pop-form-state">
+      <span class="mgt-pop__eyebrow">Free download</span>
+      <h2 class="mgt-pop__title" id="mgt-pop-title">Never miss a Greek<br>tax deadline</h2>
+      <p class="mgt-pop__sub">Get the <strong>2026 Expat Greek Tax Calendar</strong> — every key date for AFM holders, freelancers and property owners, in plain English. Plus a short note every other week, only when something on the calendar actually needs your attention.</p>
+
+      <form id="mgt-pop-form" class="mgt-pop__form" novalidate>
+        <input type="email" id="mgt-pop-email" name="email" class="mgt-pop__input"
+               placeholder="you@email.com" autocomplete="email" required>
+        <!-- honeypot: real users never fill this -->
+        <input type="text" name="mgt_hp" class="mgt-pop__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="mgt-pop__btn">Send me the calendar</button>
+      </form>
+      <p class="mgt-pop__fine">No spam. Unsubscribe in one click, anytime.</p>
+      <p class="mgt-pop__err" id="mgt-pop-err">Please enter a valid email address.</p>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div class="mgt-pop__body mgt-pop__success" id="mgt-pop-success-state" hidden>
+      <div class="mgt-pop__check">✓</div>
+      <h2 class="mgt-pop__title">Almost there</h2>
+      <p class="mgt-pop__sub">Check your inbox to confirm your subscription. Your calendar is ready below.</p>
+      <a href="/blog/guides/The_Expats_Greek_Tax_Calendar_2026.pdf"
+         class="mgt-pop__btn mgt-pop__btn--dl" download data-mgt-close>Download the 2026 calendar</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mgt-pop{
+    --mgt-night:var(--night,#1E2A3A);
+    --mgt-amber:var(--amber,#C9923A);
+    --mgt-sage:var(--sage,#6B8F71);
+    --mgt-page:var(--page,#F7F3EE);
+    --mgt-white:var(--white,#FFFFFF);
+    --mgt-serif:var(--serif,'Playfair Display',Georgia,serif);
+    --mgt-sans:var(--sans,'DM Sans',system-ui,sans-serif);
+    position:fixed; inset:0; z-index:10000;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    opacity:0; visibility:hidden; transition:opacity .28s ease, visibility .28s ease;
+  }
+  .mgt-pop.is-open{ opacity:1; visibility:visible; }
+  .mgt-pop__backdrop{ position:absolute; inset:0; background:rgba(30,42,58,.55); backdrop-filter:blur(3px); }
+  .mgt-pop__card{
+    position:relative; width:100%; max-width:440px;
+    background:var(--mgt-page); color:var(--mgt-night);
+    border-radius:14px; padding:40px 36px 32px;
+    box-shadow:0 24px 60px rgba(30,42,58,.32);
+    transform:translateY(14px) scale(.985); transition:transform .3s ease;
+    font-family:var(--mgt-sans); line-height:1.7;
+  }
+  .mgt-pop.is-open .mgt-pop__card{ transform:translateY(0) scale(1); }
+  .mgt-pop__x{
+    position:absolute; top:14px; right:16px; width:32px; height:32px;
+    background:none; border:none; cursor:pointer;
+    font-size:26px; line-height:1; color:rgba(30,42,58,.4); transition:color .2s;
+  }
+  .mgt-pop__x:hover{ color:var(--mgt-night); }
+  .mgt-pop__eyebrow{
+    font-size:11px; font-weight:500; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--mgt-amber); display:inline-flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .mgt-pop__eyebrow::before{ content:''; width:28px; height:1px; background:var(--mgt-amber); }
+  .mgt-pop__title{
+    font-family:var(--mgt-serif); font-weight:400; font-size:30px; line-height:1.18;
+    margin:0 0 14px; color:var(--mgt-night);
+  }
+  .mgt-pop__sub{ font-size:15px; font-weight:300; color:rgba(30,42,58,.72); margin:0 0 22px; }
+  .mgt-pop__sub strong{ font-weight:500; color:var(--mgt-night); }
+  .mgt-pop__form{ display:flex; flex-direction:column; gap:10px; }
+  .mgt-pop__input{
+    font-family:var(--mgt-sans); font-size:15px; padding:13px 16px;
+    border:1px solid rgba(30,42,58,.22); border-radius:6px; background:var(--mgt-white); color:var(--mgt-night);
+    transition:border-color .2s;
+  }
+  .mgt-pop__input:focus{ outline:none; border-color:var(--mgt-amber); }
+  .mgt-pop__hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+  .mgt-pop__btn{
+    font-family:var(--mgt-sans); font-size:15px; font-weight:500; cursor:pointer;
+    padding:13px 22px; border:none; border-radius:6px;
+    background:var(--mgt-amber); color:var(--mgt-white); transition:background .2s; text-decoration:none; text-align:center;
+  }
+  .mgt-pop__btn:hover{ background:#b8812e; }
+  .mgt-pop__btn--dl{ display:block; margin-top:6px; }
+  .mgt-pop__fine{ font-size:12px; color:rgba(30,42,58,.5); margin:12px 0 0; }
+  .mgt-pop__err{ font-size:13px; color:#b3402e; margin:10px 0 0; display:none; }
+  .mgt-pop__err.is-shown{ display:block; }
+  .mgt-pop__success{ text-align:center; }
+  .mgt-pop__check{
+    width:54px; height:54px; margin:0 auto 18px; border-radius:50%;
+    background:var(--mgt-sage); color:#fff; font-size:28px; line-height:54px; text-align:center;
+  }
+  @media(max-width:480px){
+    .mgt-pop{ padding:16px; align-items:flex-end; }
+    .mgt-pop__card{ padding:34px 24px 26px; border-radius:14px 14px 0 0; max-width:none; }
+    .mgt-pop__title{ font-size:26px; }
+  }
+</style>
+
+<script is:inline>
+(function(){
+  var KEY='mgt_nl_v1';                 // localStorage key
+  var DISMISS_DAYS=30;                  // re-show window after a dismiss
+  var SHOW_AFTER_MS=25000;             // time trigger
+  var SCROLL_PCT=45;                    // scroll trigger (% of page)
+
+  // EDIT ▸ paste your Make custom-webhook URL here:
+  var WEBHOOK_URL='https://hook.eu1.make.com/ty38bxtlnyd62eg4qh6fum18pf2pmlwi';
+
+  var pop=document.getElementById('mgt-pop');
+  if(!pop) return;
+  var form=document.getElementById('mgt-pop-form');
+  var emailIn=document.getElementById('mgt-pop-email');
+  var errEl=document.getElementById('mgt-pop-err');
+  var formState=document.getElementById('mgt-pop-form-state');
+  var okState=document.getElementById('mgt-pop-success-state');
+  var opened=false, armed=true;
+
+  function store(v){ try{ localStorage.setItem(KEY, v);}catch(e){} }
+  function read(){ try{ return localStorage.getItem(KEY);}catch(e){ return null; } }
+
+  function shouldSuppress(){
+    var v=read();
+    if(!v) return false;
+    if(v==='subscribed') return true;            // never show again
+    if(v.indexOf('dismissed:')===0){
+      var t=parseInt(v.split(':')[1],10)||0;
+      return (Date.now()-t) < DISMISS_DAYS*864e5; // within window
+    }
+    return false;
+  }
+
+  function track(name,props){ if(typeof plausible==='function'){ plausible(name, props?{props:props}:undefined); } }
+
+  function open(src){
+    if(opened||shouldSuppress()) return;
+    opened=true; armed=false;
+    pop.classList.add('is-open'); pop.setAttribute('aria-hidden','false');
+    setTimeout(function(){ emailIn && emailIn.focus(); }, 320);
+    track('Newsletter Popup Shown',{trigger:src||'unknown'});
+  }
+  function close(reason){
+    pop.classList.remove('is-open'); pop.setAttribute('aria-hidden','true');
+    if(reason!=='subscribed') store('dismissed:'+Date.now());
+    track('Newsletter Popup Closed',{reason:reason||'manual'});
+  }
+
+  if(shouldSuppress()) return; // wire nothing if we shouldn't show
+
+  // ── triggers ──────────────────────────────────────────────
+  var timer=setTimeout(function(){ open('time'); }, SHOW_AFTER_MS);
+
+  function onScroll(){
+    if(!armed) return;
+    var el=document.documentElement;
+    var total=el.scrollHeight-el.clientHeight;
+    var pct=total>0 ? ((el.scrollTop||document.body.scrollTop)/total)*100 : 0;
+    if(pct>=SCROLL_PCT){ clearTimeout(timer); open('scroll'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // desktop exit-intent
+  document.addEventListener('mouseout', function(e){
+    if(!armed) return;
+    if(e.clientY<=0 && !e.relatedTarget){ clearTimeout(timer); open('exit'); }
+  });
+
+  // ── close handlers ────────────────────────────────────────
+  pop.querySelectorAll('[data-mgt-close]').forEach(function(b){
+    b.addEventListener('click', function(){
+      // the download link also closes, but counts as subscribed-success exit
+      close(okState && !okState.hidden ? 'subscribed' : 'manual');
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && pop.classList.contains('is-open')) close('escape');
+  });
+
+  // ── submit ────────────────────────────────────────────────
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.classList.remove('is-shown');
+    var val=(emailIn.value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val)){ errEl.classList.add('is-shown'); emailIn.focus(); return; }
+    if(form.querySelector('[name="mgt_hp"]').value){ return; } // bot
+
+    var body=new URLSearchParams(); body.append('email', val); body.append('source', 'homepage_popup');
+
+    var done=function(){
+      store('subscribed');
+      formState.hidden=true; okState.hidden=false;
+      track('Newsletter Signup',{source:'homepage_popup'});
+    };
+
+    if(WEBHOOK_URL.indexOf('PASTE_')===0){ done(); return; } // not wired yet → still show success in preview
+
+    fetch(WEBHOOK_URL,{method:'POST', body:body, mode:'no-cors'})
+      .then(done)
+      .catch(done); // double opt-in confirms via email; optimistic success is safe
+  });
+})();
+</script>
+<!-- ═══════════════ end MyGreekTax newsletter popup ═══════════════ -->

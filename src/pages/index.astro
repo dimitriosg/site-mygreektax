@@ -1,0 +1,760 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import NewsletterPopup from '../components/NewsletterPopup.astro';
+---
+<BaseLayout
+  title="MyGreekTax — English Tax Help in Greece"
+  description="Greek tax and accounting services in plain English. AFM registration, tax returns, business setup and more — handled by licensed Greek accountants."
+  canonicalPath="/"
+>
+  <Header isHome={true} />
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">For expats &amp; nomads in Greece</div>
+    <h1>Your Greek taxes,<br>handled in <em>plain English.</em></h1>
+    <p class="hero-sub">Greek bureaucracy is confusing enough in Greek. We take the paperwork off your plate — AFM registration, annual returns, business setup — all explained and managed in English by licensed Greek accountants.</p>
+    <div class="hero-ctas">
+      <a href="#book" class="btn btn-primary btn-lg">Get a free consultation</a>
+      <a href="#services" class="btn btn-outline btn-lg">See services</a>
+    </div>
+    <p class="hero-note">No commitment. 30-minute consultation, completely free.</p>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-card-status"></div>
+      <div class="hero-card-label">AFM Registration</div>
+      <div class="hero-card-title">Tax number — completed</div>
+      <div class="hero-card-body">Your Greek TIN has been registered with AADE. Documents sent to your email.</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-status pending"></div>
+      <div class="hero-card-label">Annual Tax Return</div>
+      <div class="hero-card-title">E1 declaration — in progress</div>
+      <div class="hero-card-body">We're preparing your declaration. We'll confirm before submission.</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">48h</div>
+        <div class="stat-label">Average AFM turnaround</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">English communication</div>
+      </div>
+      <div class="stat-card light">
+        <div class="stat-num">EU</div>
+        <div class="stat-label">Regulated &amp; compliant</div>
+      </div>
+      <div class="stat-card light">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Greek forms to fill yourself</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-dot"></span>Licensed OEE-registered accountant</div>
+  <div class="trust-item"><span class="trust-dot"></span>EU-registered entity</div>
+  <div class="trust-item"><span class="trust-dot"></span>English-only communication</div>
+  <div class="trust-item"><span class="trust-dot"></span>AADE-compliant filings</div>
+  <div class="trust-item"><span class="trust-dot"></span>Digital-first, fully remote</div>
+</div>
+
+<!-- PAIN POINTS -->
+<section class="pain" id="pain">
+  <div class="section-eyebrow">Sound familiar?</div>
+  <h2 class="section-title">The paperwork nobody<br>warned you about.</h2>
+  <p class="section-sub">Moving to Greece is wonderful. The administrative side? Less so. Here's what we hear from expats every week.</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <p><strong>"I've been told I need an AFM but I don't know how to get one,</strong> and the tax office website is entirely in Greek."</p>
+    </div>
+    <div class="pain-card">
+      <p><strong>"My landlord wants a tax declaration I've never heard of.</strong> I don't even know what form to file or where to start."</p>
+    </div>
+    <div class="pain-card">
+      <p><strong>"I'm a freelancer working remotely in Greece.</strong> I have no idea what I owe, to which country, or how the Greek tax system even works."</p>
+    </div>
+    <div class="pain-card">
+      <p><strong>"I got a letter from the Greek tax authority.</strong> It's in Greek. I've been ignoring it for three weeks because I don't know what it says."</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-eyebrow">How it works</div>
+  <h2 class="section-title">Three steps to <em>sorted.</em></h2>
+  <p class="section-sub">We've designed the process to be as painless as possible — for people who have better things to do than learn Greek tax law.</p>
+  <div class="how-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Book a free call</h3>
+      <p>Tell us your situation in plain English — where you're from, how long you've been in Greece, what you need. We'll tell you exactly what's required and what it costs. No obligation.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>We handle it</h3>
+      <p>Send us your documents digitally. Our licensed Greek accountant partner takes care of all filings, registrations and submissions directly with the Greek tax authorities — you don't attend any offices.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>You get confirmation</h3>
+      <p>We send you a plain-English summary of everything that was filed, what it means, and what (if anything) you need to do next. You're always in the loop, never in the dark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-eyebrow">What we handle</div>
+  <h2 class="section-title">Services designed for<br><em>life in Greece.</em></h2>
+  <p class="section-sub">Whether you just arrived or you've been here for years with a growing pile of tax questions — or you're ready to go further — we have you covered.</p>
+
+  <div class="pricing-disclaimer">
+    <strong>About our pricing.</strong> Quoted prices are starting points for straightforward cases. Final fees are confirmed in writing after we review your specific situation. We never start work without your written approval of the final quote.
+  </div>
+
+  <div class="service-tier-label">Essentials</div>
+  <div class="services-grid" style="margin-bottom:32px;">
+    <div class="service-card expandable" data-service="AFM Registration">
+      <div class="service-icon">🪪</div>
+      <h3>AFM Registration</h3>
+      <p>Your Greek Tax Identification Number — essential for almost everything. We register you with AADE and have your AFM ready within 48 hours.</p>
+      <div class="service-price">Starting at €39</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>You don't need to visit Greece or speak Greek. We handle the AADE registration on your behalf via authorisation, prepare the paperwork, and send you your AFM number, usually within 48 hours once we have your documents. We can also activate TAXISnet and myAADE access if you'll need to file or use government services.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Annual Tax Return (E1)">
+      <div class="service-icon">📋</div>
+      <h3>Annual Tax Return (E1)</h3>
+      <p>We prepare and submit your E1 declaration to the Greek tax authority. All income types handled — employment, rental, freelance, foreign income.</p>
+      <div class="service-price">Starting at €49</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>We prepare your full E1 declaration, including any E2 for rental income and foreign income with treaty relief, and submit it through TAXISnet on your behalf via scoped authorisation. You review a plain-English summary before anything is filed. We never submit without your written approval.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Tax Authority Letters">
+      <div class="service-icon">📮</div>
+      <h3>Tax Authority Letters</h3>
+      <p>Received something from the Greek tax office and don't know what it says? We translate, explain and respond on your behalf.</p>
+      <div class="service-price">Starting at €20</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Forward us the letter and we tell you exactly what it means, what (if anything) you need to do, and by when. If a response is required, we draft and submit it on your behalf. No more anxious guessing at Greek bureaucratic language.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Rental Income Declaration">
+      <div class="service-icon">🏠</div>
+      <h3>Rental Income Declaration</h3>
+      <p>Renting out property in Greece? We handle the E2 rental income schedule and ensure you're compliant with Greek property tax obligations.</p>
+      <div class="service-price">Starting at €25</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>We handle the E2 rental schedule and its link to your E1, making sure your Greek property income is declared correctly and you claim everything you're entitled to. Works whether you're resident or non-resident.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Property Tax (ENFIA)">
+      <div class="service-icon">🏛️</div>
+      <h3>Property Tax (ENFIA)</h3>
+      <p>Annual property tax management for expat property owners. We calculate, review and ensure your ENFIA is correctly filed each year.</p>
+      <div class="service-price">Starting at €49/yr</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>We review your ENFIA assessment each year, check it against your actual property details, flag any errors, and make sure it's filed and paid correctly. Useful if you own property but don't live in Greece full-time.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Back-Year Declarations">
+      <div class="service-icon">📅</div>
+      <h3>Back-Year Declarations</h3>
+      <p>Missing previous years? Very common among expats. We prepare and submit outstanding declarations to bring you fully up to date.</p>
+      <div class="service-price">Starting at €50/yr</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Missing one or more past years is extremely common and usually fixable. We assess what's outstanding, prepare the late declarations, and bring you fully up to date, explaining any penalties clearly before we proceed.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="service-tier-label">Freelancers &amp; Self-Employed</div>
+  <div class="services-grid" style="margin-bottom:32px;">
+    <div class="service-card expandable" data-service="Freelancer Setup">
+      <div class="service-icon">💼</div>
+      <h3>Freelancer Setup</h3>
+      <p>Working remotely from Greece? We register your self-employment status with EFKA and AADE, set up your contribution schedule, and explain your obligations in plain English.</p>
+      <div class="service-price">Starting at €79</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>We register your self-employment with AADE and EFKA, set up your contribution schedule, and explain exactly what you'll owe and when. You get a clear plain-English picture of life as a freelancer in Greece before you commit.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Digital Nomad Visa Tax Setup">
+      <div class="service-icon">💻</div>
+      <h3>Digital Nomad Visa Tax Setup</h3>
+      <p>Greece's DNV requires specific tax registrations. We handle the AADE and EFKA steps in full, so your visa compliance is backed by proper tax registration.</p>
+      <div class="service-price">Starting at €149</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>The Digital Nomad Visa comes with tax obligations most people aren't told about upfront. We set up your AADE and EFKA registrations correctly, explain what you actually owe and when, and make sure your tax position matches your visa status, so there are no surprises at filing time. Everything handled in English.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Annual Freelancer Retainer">
+      <div class="service-icon">🔄</div>
+      <h3>Annual Freelancer Retainer</h3>
+      <p>Ongoing support for self-employed expats. E1 filing, EFKA monitoring, quarterly check-ins and ad-hoc questions — all in English, all year round.</p>
+      <div class="service-price">Starting at €600/yr</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Ongoing support for self-employed expats: your E1 filing, EFKA monitoring, quarterly check-ins, and answers to ad-hoc questions throughout the year. One fixed annual fee, no surprises, all in English.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="service-tier-label">Business Setup</div>
+  <div class="services-grid" style="margin-bottom:32px;">
+    <div class="service-card expandable" data-service="Sole Trader Registration">
+      <div class="service-icon">🏪</div>
+      <h3>Sole Trader Registration</h3>
+      <p>The simplest way to operate a business in Greece as an individual. We handle GEMI registration, tax office notifications and EFKA setup — fully in English.</p>
+      <div class="service-price on-request">Quote on request</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>The simplest way to operate as an individual business in Greece. We handle GEMI registration, the tax-office notifications, and EFKA setup, and explain your ongoing obligations. Pricing depends on your specifics, so we quote after a quick look at your situation.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="IKE Formation (Single-Member LLC)">
+      <div class="service-icon">🏢</div>
+      <h3>IKE Formation (Single-Member LLC)</h3>
+      <p>Greece's most popular structure for small businesses. We manage the full setup: articles of association, GEMI registration, tax and social security notifications.</p>
+      <div class="service-price on-request">Quote on request</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Greece's most popular small-business structure. We manage the full formation: articles of association, GEMI registration, and tax and social-security notifications. We quote once we understand your plans, so the price fits the actual work.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <a href="#book" class="service-card service-card-cta">
+      <div class="service-icon">💬</div>
+      <h3>Not sure which structure?</h3>
+      <p>Sole trader, IKE, or something else? Get a free 30-minute consultation and we'll explain your options in plain English — no commitment required.</p>
+      <div class="service-price" style="color:var(--sage);">Free consultation →</div>
+    </a>
+  </div>
+
+  <div class="service-tier-label">Tax Residency &amp; Complex Cases</div>
+  <div class="tier-spotlight">
+    <span class="tier-spotlight-tag">Our specialty</span>
+    <p><strong>Tax residency transfers — moving to or leaving Greece.</strong> The most common high-impact case we handle, end to end. Most expats discover too late that getting this wrong costs thousands. We get it right the first time.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card expandable" data-service="Tax Residency - Moving to Greece">
+      <div class="service-icon">✈️</div>
+      <h3>Tax Residency — Moving to Greece</h3>
+      <p>Full relocation tax setup: Greek registration, residency certificate, first-year income planning and coordination with your home country obligations. High complexity, handled in full.</p>
+      <div class="service-price on-request">Quote on request</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Our specialty. Full relocation tax setup: Greek registration, residency certificate, first-year income planning, and coordination with your home-country obligations so you're not taxed twice. High-impact and worth getting right the first time, so we quote after understanding your situation.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Tax Residency - Leaving Greece">
+      <div class="service-icon">🌍</div>
+      <h3>Tax Residency — Leaving Greece</h3>
+      <p>Leaving Greece properly matters. We handle deregistration from AADE, your certificate of non-residency, and your final tax declaration to close out cleanly.</p>
+      <div class="service-price on-request">Quote on request</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Leaving properly is where people get caught out. We handle deregistration from AADE, your certificate of non-residency, and your final declaration, so Greece stops treating you as resident and taxing your worldwide income. We quote once we know your circumstances.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+    <div class="service-card expandable" data-service="Article 5A Non-Dom Regime">
+      <div class="service-icon">⭐</div>
+      <h3>Article 5A Non-Dom Regime</h3>
+      <p>Greece's flat-tax regime for high-net-worth individuals relocating. A €100k annual flat tax on foreign income regardless of amount. Complex setup — we handle every step.</p>
+      <div class="service-price on-request">Quote on request</div>
+      <div class="service-detail"><div class="service-detail-inner">
+        <p>Greece's flat-tax regime for high-net-worth individuals relocating: a €100k annual flat tax on foreign income regardless of amount, for up to 15 years. Strict eligibility and deadlines apply. We assess whether you qualify and handle the full application.</p>
+        <button type="button" class="service-detail-btn">Start this request →</button>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS & ALLOWANCES -->
+<section class="benefits" id="benefits">
+  <div class="section-eyebrow">Επιδόματα</div>
+  <h2 class="section-title">Greek Benefits &amp; Allowances<br><em>you may be entitled to.</em></h2>
+  <div class="benefits-intro">
+    <p class="section-sub" style="margin-bottom:0;">Most expats in Greece never claim the government benefits they're legally entitled to — not because they don't qualify, but because the application process is in Greek and nearly impossible to navigate without help. We handle it for you.</p>
+    <div class="benefits-note"><strong>Did you know?</strong> Many foreign residents in Greece qualify for the same state benefits as Greek citizens — including rent allowance, heating subsidies, and child benefits — but miss out every year simply because they can't access the system in English. We change that.</div>
+  </div>
+  <div class="benefits-grid">
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Housing</div>
+      <div class="benefit-greek">Επίδομα Ενοικίου</div>
+      <h3>Rent Allowance</h3>
+      <p>A monthly housing subsidy from OPEKA for eligible low-to-middle income residents renting in Greece. Many expats qualify but never apply. We assess your eligibility and submit the application entirely in English.</p>
+      <div class="benefit-price">Application assistance starting at €25</div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Energy</div>
+      <div class="benefit-greek">Επίδομα Θέρμανσης</div>
+      <h3>Heating Allowance</h3>
+      <p>An annual government subsidy to help cover winter heating costs — oil, gas, electricity or pellets. Paid directly to your account each autumn. We handle the application through the AADE portal on your behalf.</p>
+      <div class="benefit-price">Application assistance starting at €20</div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Family</div>
+      <div class="benefit-greek">Επίδομα Παιδιού — Α21</div>
+      <h3>Child Benefit</h3>
+      <p>A monthly allowance per dependent child, paid by OPEKA under the A21 programme. The amount increases with each child. Foreign residents with children living in Greece are eligible if they meet the income criteria.</p>
+      <div class="benefit-price">Application assistance starting at €25</div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Income support</div>
+      <div class="benefit-greek">Ελάχιστο Εγγυημένο Εισόδημα</div>
+      <h3>Minimum Guaranteed Income</h3>
+      <p>Greece's social safety net benefit for households below a set income threshold. Covers essential living costs. Eligibility depends on residency, income, and assets — we assess your situation and manage the OPEKA application.</p>
+      <div class="benefit-price">Eligibility check starting at €15</div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Employment</div>
+      <div class="benefit-greek">Επίδομα Ανεργίας</div>
+      <h3>Unemployment Benefit</h3>
+      <p>If you've been employed in Greece and paid into EFKA, you may be entitled to unemployment benefit through DYPA after losing your job. We help you understand your entitlement and navigate the claim process.</p>
+      <div class="benefit-price">Guidance starting at €20</div>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-tag">Disability</div>
+      <div class="benefit-greek">Επίδομα Αναπηρίας</div>
+      <h3>Disability Allowance</h3>
+      <p>Monthly support for residents with certified disabilities, paid through KEPA and OPEKA. Rates vary by degree of disability. We explain your options and assist with the certification and application process in plain English.</p>
+      <div class="benefit-price">Guidance starting at €25</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="compliance" id="compliance">
+  <div class="section-eyebrow">Why trust us</div>
+  <h2 class="section-title">Built for compliance.<br><em>Built for you.</em></h2>
+  <p class="section-sub">We're not a translation service. Every filing is handled by a licensed, regulated Greek accountant — we just make the whole thing work in English.</p>
+  <div class="trust-pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <h3>Licensed Greek accountant</h3>
+      <p>All regulated filings are made by a licensed Greek tax professional registered with the relevant Greek professional bodies. Fully compliant with Greek law.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <h3>EU-registered entity</h3>
+      <p>MyGreekTax operates under a registered EU entity structure, giving you regulatory certainty and consumer protections as a client within the European Union.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <h3>Your data, protected</h3>
+      <p>We handle your financial documents under GDPR-compliant data practices. Your information is never shared with third parties outside the filing process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS — placeholder, uncomment and fill in when you have 2-3 real client quotes
+<section class="testimonials" id="testimonials">
+  <div class="section-eyebrow">From our clients</div>
+  <h2 class="section-title">What expats say<br><em>after we've handled it.</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p>"[Client quote here, ~25-40 words. Specific outcome works best: 'AFM in 36 hours, all in English, zero stress.']"</p>
+      <div class="testimonial-author">
+        <strong>[Name or initials]</strong>
+        <span>[Country], [Service used]</span>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p>"[Second quote]"</p>
+      <div class="testimonial-author">
+        <strong>[Name]</strong>
+        <span>[Country], [Service]</span>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <p>"[Third quote]"</p>
+      <div class="testimonial-author">
+        <strong>[Name]</strong>
+        <span>[Country], [Service]</span>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-eyebrow">Frequently asked</div>
+  <h2 class="section-title">Questions we hear<br><em>every week.</em></h2>
+  <p class="section-sub">If yours isn't here, ask us on the free call.</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do I need an AFM even if I'm just staying in Greece for a few months?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Possibly. If you're renting, opening a bank account, buying a car, or doing anything that involves a Greek contract, you'll likely need an AFM. It's also required for most government interactions. It doesn't commit you to being a tax resident — it's simply a reference number. We recommend getting one if you're staying more than a month or two.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        I'm a digital nomad — am I a Greek tax resident?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">This depends on how long you've been in Greece in the calendar year. Greece considers you a tax resident if you've spent more than 183 days in the country in a given year. If you are a Greek tax resident, you need to declare your worldwide income. We can assess your situation on a free call and advise on what applies to you.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Can I do everything remotely, or do I need to visit an office?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">For most services, yes — everything is done remotely. You send us your documents digitally, we handle the rest. For some registrations, a power of attorney signed in your home country (or via a Greek notary) may be required, but we guide you through that process step by step.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How do I pay, and is there a subscription?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">We charge per service, not via subscription. You pay for what you need when you need it. Payment is via card or bank transfer. We'll always confirm the fee upfront before any work begins — no surprises.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What if I've missed previous tax years? Am I in trouble?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">You're not alone — this is one of the most common situations we deal with. Greece does have late filing penalties, but they are often manageable, especially for individuals. The worst approach is to continue ignoring it. Book a free call and we'll give you an honest assessment of where you stand and what the next step is.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Who actually does my filing — is it a real Greek accountant?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Yes. MyGreekTax is the English-language front end; all regulated filings are carried out by our licensed Greek accountant partner who is registered with the relevant Greek professional bodies. You get the accessibility of an English-speaking service backed by the compliance of a licensed professional.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Will I have to share my TAXISnet password?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">No, and you shouldn't share it with anyone. We use a formal εξουσιοδότηση (authorisation) granted by you through myAADE, scoped only to the specific filing we're handling for you. Your TAXISnet account stays under your sole control. This is the same access mechanism Greek accountants use for their domestic clients, and it's the most secure way to delegate a filing without compromising your wider account.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are you a licensed accounting firm?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">No, and we're upfront about it. MyGreekTax is an administrative coordination service operated by an EU-registered entity. Every regulated filing is executed by a licensed Greek accountant who is a member of the Economic Chamber of Greece (OEE). Our role is to make the process accessible in English; theirs is to handle the filing under Greek law. Both roles are clearly separated and disclosed.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What if my case is more complex than the starting price?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Starting prices on this page apply to straightforward cases. After the free consultation we send you a written quote covering the full scope of work for your specific situation. Nothing starts until you've reviewed and approved that quote in writing. You will never receive a surprise invoice.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What's your refund policy?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">If we haven't started work yet, we refund in full, no questions. Once a filing is in progress, refunds are case-by-case depending on the stage; we'll always be fair and transparent. If something we deliver is wrong because of an error on our side, we fix it at our cost — that's not a refund, it's just standard practice.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION FORM -->
+<section class="cta-section" id="book">
+  <div class="form-container">
+    <div class="form-intro">
+      <div class="section-eyebrow" style="justify-content:center;">Free consultation</div>
+      <h2>Tell us about<br><em>your situation.</em></h2>
+      <p>Share a few details. We'll review your message and email you back within one business day to set up a 30-minute call. No obligation, no jargon.</p>
+    </div>
+
+    <div class="form-card">
+      <form id="consultation-form" action="https://formspree.io/f/xojrepbr" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-field">
+            <label for="status">Are you in Greece?</label>
+            <select id="status" name="status" required>
+              <option value="">Select an option</option>
+              <option value="Yes, in Greece">Yes, I'm in Greece</option>
+              <option value="Planning to move">Not yet, planning to move</option>
+              <option value="Leaving Greece">Leaving Greece</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="situation">Tell us briefly what you need help with</label>
+          <textarea id="situation" name="situation" rows="4" required placeholder="A few sentences about your situation. We'll take it from there."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="urgency">How urgent is it?</label>
+            <select id="urgency" name="urgency">
+              <option value="Within a week">Within a week</option>
+              <option value="This month">This month</option>
+              <option value="Just exploring">Just exploring</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="referral_source">How did you find us?</label>
+            <select id="referral_source" name="referral_source" required>
+              <option value="">Select an option</option>
+              <option value="Google or another search engine">Google or another search engine</option>
+              <option value="AI assistant (ChatGPT, Claude, etc.)">AI assistant (ChatGPT, Claude, etc.)</option>
+              <option value="Facebook group or page">Facebook group or page</option>
+              <option value="Reddit">Reddit</option>
+              <option value="Recommendation from someone">Recommendation from someone</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-conditional" id="llm-followup">
+          <p class="form-conditional-note">Interesting! This genuinely helps us understand how people find us.</p>
+          <div class="form-field">
+            <label for="llm_name">Which AI assistant?</label>
+            <select id="llm_name" name="llm_name" required disabled>
+              <option value="">Select an option</option>
+              <option value="ChatGPT">ChatGPT</option>
+              <option value="Claude">Claude</option>
+              <option value="Gemini">Gemini</option>
+              <option value="Perplexity">Perplexity</option>
+              <option value="Microsoft Copilot">Microsoft Copilot</option>
+              <option value="Other / not sure">Other / not sure</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="llm_question">What did you ask it? (optional)</label>
+            <textarea id="llm_question" name="llm_question" rows="2" placeholder="Roughly what you typed, e.g. 'how do I file a tax return in Greece as an expat'" disabled></textarea>
+          </div>
+        </div>
+
+        <div class="form-conditional" id="other-followup">
+          <div class="form-field">
+            <label for="referral_other">Where exactly? (optional)</label>
+            <input type="text" id="referral_other" name="referral_other" placeholder="A forum, a newsletter, a friend, anywhere at all" disabled>
+          </div>
+        </div>
+
+        <input type="hidden" name="_subject" value="New consultation request — MyGreekTax">
+        <button type="submit" class="btn btn-primary btn-lg form-submit">Send and get a callback</button>
+        <p class="form-fine">We respond within one business day, Monday to Friday. Your details stay between us, never shared with third parties.</p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="form-success-icon">✓</div>
+        <h3>Thank you, we got it.</h3>
+        <p>We'll review your message and email you back within one business day to set up the call. Check your inbox at the address you provided.</p>
+      </div>
+
+      <div class="form-error" id="form-error">
+        <h3>Something went wrong.</h3>
+        <p>Please try again, or email us directly at <a href="mailto:hello@mygreektax.eu">hello@mygreektax.eu</a> and we'll take it from there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <Footer />
+  <NewsletterPopup />
+
+  <script is:inline>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Consultation form submission via Formspree (AJAX, stays on page)
+  (function() {
+    const form = document.getElementById('consultation-form');
+    if (!form) return;
+    const submitBtn = form.querySelector('.form-submit');
+    const successBox = document.getElementById('form-success');
+    const errorBox = document.getElementById('form-error');
+
+    // Conditional follow-ups for "How did you find us?"
+    // Hidden blocks keep their fields disabled, so they are skipped by
+    // validation and excluded from the Formspree submission.
+    const sourceSelect = document.getElementById('referral_source');
+    const llmBlock = document.getElementById('llm-followup');
+    const otherBlock = document.getElementById('other-followup');
+
+    function toggleBlock(block, show) {
+      block.classList.toggle('active', show);
+      block.querySelectorAll('input, select, textarea').forEach(el => {
+        el.disabled = !show;
+        if (!show) el.value = '';
+      });
+    }
+
+    sourceSelect.addEventListener('change', function() {
+      toggleBlock(llmBlock, this.value.indexOf('AI assistant') === 0);
+      toggleBlock(otherBlock, this.value === 'Other');
+    });
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      errorBox.classList.remove('active');
+
+      // Native validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          successBox.classList.add('active');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Track successful form submission
+          plausible('Form Submitted', { props: {
+            referral_source: (document.getElementById('referral_source') || {}).value || 'unknown'
+          }});
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        errorBox.classList.add('active');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  })();
+
+  // ── Service card expand + prefill ──────────────────────────────────
+  (function() {
+    var cards = document.querySelectorAll('.service-card.expandable');
+    cards.forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        // If the button was clicked, prefill + scroll instead of just toggling
+        if (e.target.closest('.service-detail-btn')) {
+          e.preventDefault();
+          var service = card.getAttribute('data-service') || '';
+          var box = document.getElementById('situation');
+          if (box) {
+            var prefix = 'I would like help with: ' + service + '. ';
+            // Only prefill if the user hasn't already typed something
+            if (!box.value.trim()) {
+              box.value = prefix;
+            } else if (box.value.indexOf(service) === -1) {
+              box.value = prefix + box.value;
+            }
+          }
+          var form = document.getElementById('book');
+          if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (box) setTimeout(function(){ box.focus(); }, 500);
+          if (typeof plausible === 'function') {
+            plausible('Service Interest', { props: { service: service } });
+          }
+          return;
+        }
+        // Otherwise toggle this card's detail panel (accordion: close others)
+        var isOpen = card.classList.contains('open');
+        cards.forEach(function(c){ c.classList.remove('open'); });
+        if (!isOpen) card.classList.add('open');
+      });
+    });
+  })();
+
+  // Deferred so the Plausible deferred script is guaranteed to be ready.
+  function initTracking() {
+    if (typeof plausible !== 'function') {
+      return setTimeout(initTracking, 100);
+    }
+
+    // Scroll depth — fires once per milestone per page load
+    var milestones = [25, 50, 75, 90];
+    var reached = {};
+    function getScrollPct() {
+      var el = document.documentElement;
+      var scrolled = el.scrollTop || document.body.scrollTop;
+      var total = el.scrollHeight - el.clientHeight;
+      return total > 0 ? Math.round((scrolled / total) * 100) : 0;
+    }
+    function onScroll() {
+      var pct = getScrollPct();
+      milestones.forEach(function(m) {
+        if (!reached[m] && pct >= m) {
+          reached[m] = true;
+          plausible('Scroll Depth', { props: { milestone: m + '%' } });
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // CTA clicks — records label text and page section
+    document.querySelectorAll('a[href="#book"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var section = 'unknown';
+        var node = el.closest('section, nav, footer, div[class]');
+        if (node) {
+          var id = node.id || node.className.split(' ')[0];
+          section = id || 'unknown';
+        }
+        plausible('CTA Clicked', { props: {
+          label: el.textContent.trim().substring(0, 60),
+          section: section
+        }});
+      });
+    });
+  }
+
+  // Kick off after DOM is fully ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(initTracking, 0); });
+  } else {
+    setTimeout(initTracking, 0);
+  }  </script>
+</BaseLayout>

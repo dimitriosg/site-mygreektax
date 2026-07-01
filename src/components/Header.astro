@@ -1,0 +1,25 @@
+---
+// Site navigation. Internal anchors (#services etc.) only resolve on the
+// homepage, so on subpages (e.g. /blog/) we point them back at "/".
+interface Props {
+  isHome?: boolean;
+}
+const { isHome = true } = Astro.props;
+const prefix = isHome ? '' : '/';
+---
+<nav>
+  <div class="nav-brand">
+    <a href="/" class="logo">
+      <span class="logo-my">My</span><span class="logo-greek">Greek</span><span class="logo-tax">Tax</span>
+    </a>
+    <span class="nav-tagline">We speak Greek so you don't have to.</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href={`${prefix}#services`}>Services</a></li>
+    <li><a href={`${prefix}#benefits`}>Benefits</a></li>
+    <li><a href={`${prefix}#how`}>How it works</a></li>
+    <li><a href={`${prefix}#faq`}>FAQ</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href={`${prefix}#book`} class="btn btn-primary" style="padding:8px 18px; font-size:13px;">Get a consultation</a></li>
+  </ul>
+</nav>

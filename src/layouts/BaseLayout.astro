@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogType?: string;
+  ogImage?: string;
+  canonicalPath?: string; // e.g. "/blog/how-to-get-an-afm-in-greece/"
+}
+
+const {
+  title,
+  description,
+  ogType = 'website',
+  ogImage = 'https://mygreektax.eu/og-image.png',
+  canonicalPath = '/',
+} = Astro.props;
+
+const canonical = new URL(canonicalPath, Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="theme-color" content="#C9923A" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <script defer data-domain="mygreektax.eu" src="https://plausible.io/js/script.tagged-events.js"></script>
+  <script is:inline>
+    window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }
+  </script>
+</head>
+<body>
+  <slot />
+</body>
+</html>

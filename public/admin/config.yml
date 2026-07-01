@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: dimitriosg/site-mygreektax
+  branch: main
+  base_url: https://sveltia-cms-auth.YOUR-SUBDOMAIN.workers.dev
+
+# Set to false once the OAuth Worker (base_url above) is deployed and the
+# GitHub OAuth App callback URL is configured. Until then, local development
+# can use the local Git backend below by running `npx decap-server` and
+# uncommenting it (Sveltia CMS supports the same local_backend flag as Decap).
+# local_backend: true
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+site_url: https://mygreektax.eu
+display_url: https://mygreektax.eu
+logo_url: /favicon.svg
+
+collections:
+  - name: blog
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{category}}"
+    sortable_fields: ["pubDate", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "SEO Title (optional, overrides browser tab / meta title)", name: "seoTitle", widget: "string", required: false }
+      - { label: "Description (meta description, ~155 chars)", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Essentials", "Tax residency", "Freelancers", "Business setup", "Property"]
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Updated Date", name: "updatedDate", widget: "datetime", required: false }
+      - { label: "Reading Time (e.g. '8 min read')", name: "readingTime", widget: "string", required: false }
+      - { label: "Draft (hide from site)", name: "draft", widget: "boolean", default: true }
+      - { label: "Social Share Image", name: "ogImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
