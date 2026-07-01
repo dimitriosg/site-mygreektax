@@ -7,6 +7,8 @@ readingTime: "10 min read"
 draft: false
 ---
 
+**Short answer:** Digital nomads in Greece owe no Greek income tax on foreign-sourced income if they stay under 183 days — exceed that threshold and worldwide income becomes taxable as a Greek tax resident.
+
 Greece's Digital Nomad Visa (DNV) is one of the most accessible in Europe — but the tax picture is more nuanced than most guides suggest. Your obligations depend almost entirely on **how long you stay** and **who your clients are**. Here is a plain-English breakdown.
 
 > **Disclaimer:** This article is for general information only and does not constitute tax advice. Greek tax law changes frequently. Always consult a licensed Greek accountant before making decisions about your tax residency or filings.
