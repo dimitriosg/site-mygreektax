@@ -74,13 +74,13 @@ For a typical expat employee who is a Greek tax resident with only a Greek salar
 
 For a freelancer, add the E3 to report business profit. For a property owner, add the E2 for rental income. For someone with income abroad, add the foreign income lines with the correct treaty relief. The form scales with the complexity of your life.
 
-| Your situation | Forms you need | Key thing to get right |
-|---|---|---|
-| Employee, salary only | E1 | Resident status and the employee tax reduction |
-| Freelancer or sole trader | E1 + E3 | Net profit, deductible expenses, EFKA |
-| Property owner renting out | E1 + E2 | Rental income declared correctly |
-| Income from abroad | E1 (foreign income lines) | Correct double taxation treaty relief |
-| Missed previous years | E1 for each late year | Filing before penalties grow further |
+**Which forms you need**
+
+- **Employee, salary only:** E1. Get right: resident status and the employee tax reduction.
+- **Freelancer or sole trader:** E1 + E3. Get right: net profit, deductible expenses, EFKA.
+- **Property owner renting out:** E1 + E2. Get right: rental income declared correctly.
+- **Income from abroad:** E1 (foreign income lines). Get right: correct double taxation treaty relief.
+- **Missed previous years:** E1 for each late year. Get right: filing before penalties grow further.
 
 ## Getting it filed without the stress
 
