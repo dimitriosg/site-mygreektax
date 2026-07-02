@@ -9,6 +9,8 @@ readingTime: "8 min read"
 draft: false
 ---
 
+**Short answer:** To get an AFM in Greece as a foreigner, visit your local tax office (DOY) with your passport and proof of address — or appoint a representative to do it for you. EU citizens can apply in person; non-EU citizens typically need a legal representative. The process takes one to three working days and the number is issued on the spot in most cases.
+
 The AFM is the first thing almost every expat in Greece needs to sort out, and yet it manages to trip people up constantly. The Greek tax authority website is entirely in Greek, the local tax offices (DOY) have unpredictable hours, and the official guidance assumes you already know how the Greek administrative system works.
 
 This guide covers everything you need to know in 2026: what the AFM actually is, who is required to get one, what documents you need, the three different ways to apply, and what to do once you have your number.
