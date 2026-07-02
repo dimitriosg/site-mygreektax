@@ -55,6 +55,21 @@ const dateFmt = (d: Date) =>
 
   <Footer />
   <NewsletterPopup />
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': title,
+    'description': description,
+    'datePublished': pubDate.toISOString(),
+    'dateModified': (updatedDate ?? pubDate).toISOString(),
+    'author': { '@type': 'Organization', 'name': 'MyGreekTax', 'url': 'https://mygreektax.eu' },
+    'publisher': { '@type': 'Organization', 'name': 'MyGreekTax', 'url': 'https://mygreektax.eu', 'logo': { '@type': 'ImageObject', 'url': 'https://mygreektax.eu/og-image.png' } },
+    'mainEntityOfPage': { '@type': 'WebPage', '@id': 'https://mygreektax.eu/blog/' + slug + '/' },
+    'image': 'https://mygreektax.eu/og-image.png',
+    'url': 'https://mygreektax.eu/blog/' + slug + '/'
+  })} />
+
 </BaseLayout>
 
 <style>
