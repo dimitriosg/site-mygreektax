@@ -4,3 +4,9 @@ dist/
 .env
 .DS_Store
 cms-oauth-worker/node_modules/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
