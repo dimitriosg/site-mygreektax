@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your 2026 Greek Tax Calendar is downloading | MyGreekTax</title>
+  <meta name="robots" content="noindex">
+  <!-- Plausible (same as the rest of the site) -->
+  <script defer data-domain="mygreektax.eu" src="https://plausible.io/js/script.tagged-events.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{ --night:#1E2A3A; --amber:#C9923A; --sage:#6B8F71; --page:#F7F3EE; --white:#fff; }
+    *{ box-sizing:border-box; }
+    body{ margin:0; background:var(--page); color:var(--night); font-family:'DM Sans',system-ui,sans-serif; line-height:1.7;
+      min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px; }
+    .brand{ font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:500; margin-bottom:22px; }
+    .brand .my{ color:var(--sage); } .brand .greek{ font-style:italic; } .brand .tax{ color:var(--amber); }
+    .card{ background:var(--white); max-width:460px; width:100%; border-radius:14px; padding:40px 34px; text-align:center;
+      box-shadow:0 18px 48px rgba(30,42,58,.10); }
+    .check{ width:56px; height:56px; margin:0 auto 18px; border-radius:50%; background:var(--sage); color:#fff;
+      font-size:30px; line-height:56px; }
+    h1{ font-family:'Playfair Display',Georgia,serif; font-weight:400; font-size:26px; line-height:1.2; margin:0 0 12px; }
+    p{ font-size:15px; font-weight:300; color:rgba(30,42,58,.78); margin:0 0 22px; }
+    .btn{ display:inline-block; background:var(--amber); color:#fff; text-decoration:none; font-weight:500; font-size:15px;
+      padding:13px 26px; border-radius:6px; transition:background .2s; }
+    .btn:hover{ background:#b8812e; }
+    .back{ display:block; margin-top:20px; font-size:13px; color:rgba(30,42,58,.5); text-decoration:none; }
+    .back:hover{ color:var(--night); }
+  </style>
+</head>
+<body>
+  <div class="brand"><span class="my">My</span><span class="greek">Greek</span><span class="tax">Tax</span></div>
+  <div class="card">
+    <div class="check">&#10003;</div>
+    <h1>Your calendar is on its way</h1>
+    <p>The download should start automatically. If nothing happens, use the button below.</p>
+    <a id="dl" class="btn" href="/blog/guides/The_Expats_Greek_Tax_Calendar_2026.pdf" download>Download the 2026 calendar</a>
+    <a class="back" href="/">Back to mygreektax.eu</a>
+  </div>
+
+  <script>
+    (function () {
+      var PDF = '/blog/guides/The_Expats_Greek_Tax_Calendar_2026.pdf';
+      // Track the download intent as a Plausible custom event (pageview is tracked automatically, with UTM source)
+      try { plausible('Calendar Downloaded'); } catch (e) {}
+      // Auto-start the download without navigating away (keeps the pageview registered)
+      setTimeout(function () {
+        var a = document.createElement('a');
+        a.href = PDF; a.setAttribute('download', ''); a.style.display = 'none';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      }, 700);
+    })();
+  </script>
+</body>
+</html>
