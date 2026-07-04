@@ -494,15 +494,12 @@ import NewsletterPopup from '../components/NewsletterPopup.astro';
     </div>
 
     <div class="form-card">
-      <!-- WebhookLeadIntake ticket: was Formspree (https://formspree.io/f/xojrepbr).
-           Formspree's own webhook forwarding is a paid feature; this now posts
-           straight to the "Incoming Form" Make scenario, which creates the
-           Client record (with a proper Client Code) via the portal, then
-           sends the ack email + Telegram ping. Field names below (name,
-           email, phone, status, situation, urgency, referral_source,
-           referral_other, llm_name, llm_question) are relied on as-is by
-           that Make scenario's field mapping — don't rename them without
-           updating the scenario too. -->
+      {/* Consultation form posts to the "Incoming Form" Make webhook, which creates
+          the Client record (with a proper Client Code) via the portal, then sends the
+          ack email + Telegram ping. Field names below (name, email, phone, status,
+          situation, urgency, referral_source, referral_other, llm_name, llm_question)
+          are relied on as-is by that Make scenario's mapping. Do not rename them
+          without updating the scenario too. */}
       <form id="consultation-form" action="https://hook.eu1.make.com/shl2hh7m5bqognij1ogonqlux7eho31p" method="POST" novalidate>
         <div class="form-row">
           <div class="form-field">
@@ -614,7 +611,7 @@ import NewsletterPopup from '../components/NewsletterPopup.astro';
     if (!isOpen) item.classList.add('open');
   }
 
-  // Consultation form submission via Formspree (AJAX, stays on page)
+  // Consultation form submission to the Make webhook (AJAX, stays on page)
   (function() {
     const form = document.getElementById('consultation-form');
     if (!form) return;
@@ -624,7 +621,7 @@ import NewsletterPopup from '../components/NewsletterPopup.astro';
 
     // Conditional follow-ups for "How did you find us?"
     // Hidden blocks keep their fields disabled, so they are skipped by
-    // validation and excluded from the Formspree submission.
+    // validation and excluded from the submission.
     const sourceSelect = document.getElementById('referral_source');
     const llmBlock = document.getElementById('llm-followup');
     const otherBlock = document.getElementById('other-followup');

@@ -79,5 +79,5 @@ Visit `https://mygreektax.eu/admin`, click **Login with GitHub**, authorize, and
 ## Notes
 
 - The brand colors/fonts in `src/styles/global.css` were taken from the live site's actual CSS, which differs slightly from the original brand-guide doc (palette: night `#1E2A3A`, amber `#C9923A`, sage `#6B8F71`; fonts: Playfair Display + DM Sans). Treat this CSS as the source of truth going forward.
-- The consultation form posts to Formspree; the newsletter popup posts to a Make.com webhook. Both are unchanged from the live site — no backend needed.
+- The consultation form and the newsletter popup both post to Make.com webhooks. The consultation form hits the "Incoming Form" scenario (creates the Client via the portal, then sends the ack email + Telegram ping); the popup hits the newsletter-capture scenario. No backend needed in this repo.
 - `digital-nomad-greece-taxes.md` is a draft stub (`draft: true`) for the "coming soon" post already teased on the live blog index. Flip `draft: false` and fill in content when ready.
