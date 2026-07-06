@@ -3,7 +3,7 @@ title: 'Greece Tax Residency & Double Tax Treaties: The Tie-Breaker Rule Explain
 seoTitle: 183 Days in Greece but Not Tax Resident? Treaty Tie-Breaker | MyGreekTax
 description: Spend over 183 days in Greece but your life is abroad? A double tax treaty's tie-breaker rule can keep you tax resident elsewhere. Here's how it works.
 category: Tax residency
-pubDate: 2026-07-06T00:00
+pubDate: 2026-07-03T00:00
 updatedDate: ''
 readingTime: 9 min read
 draft: false
@@ -18,7 +18,7 @@ Almost every guide tells you the same thing: cross 183 days in Greece and you be
 
 Our guide on [the 183-day rule and Greek tax residency](/blog/greek-tax-resident-183-day-rule/) covers the basics: pass 183 days in a twelve-month period, or have your home or centre of life in Greece, and Greek law can treat you as a resident.
 
-But Greek domestic law is not the final word. Greece has signed double taxation treaties with dozens of countries, and where a treaty exists, it sits *above* the domestic day-count rule. So you can be a Greek tax resident under Greek law and a resident of your home country under its law at the same time. When both countries claim you, the treaty decides which one wins. That decision is made by the tie-breaker rule, and it is the single most overlooked tool in expat tax.
+But Greek domestic law is not the final word. Greece has signed double taxation treaties with dozens of countries, and where a treaty exists, it sits _above_ the domestic day-count rule. So you can be a Greek tax resident under Greek law and a resident of your home country under its law at the same time. When both countries claim you, the treaty decides which one wins. That decision is made by the tie-breaker rule, and it is the single most overlooked tool in expat tax.
 
 ## What the tie-breaker rule actually does
 
@@ -42,14 +42,14 @@ Handled properly, the outcome for someone in that position is that he does not f
 
 ## Why "it's true" is not the same as "it's safe"
 
-This is the trap. A defensible treaty position and a *documented* treaty position are two very different things. If the Greek authorities ever ask why someone present for more than half the year did not become a resident, "there was a treaty" is not an answer on its own. You need the right evidence, assembled the right way, ideally before you file rather than scrambling after a query lands.
+This is the trap. A defensible treaty position and a _documented_ treaty position are two very different things. If the Greek authorities ever ask why someone present for more than half the year did not become a resident, "there was a treaty" is not an answer on its own. You need the right evidence, assembled the right way, ideally before you file rather than scrambling after a query lands.
 
 That is deliberately where the detail stops here. Which treaty applies, which test carries the weight in your specific case, exactly what to keep on file and how to frame it, that is the part that turns a plausible argument into an airtight one, and it is genuinely case-by-case. Get it right and it is close to bulletproof. Get it wrong, or leave it undocumented, and a position that was true on paper collapses the moment it is tested.
 
 ## Where people get it wrong
 
 - **Treating 183 days as the whole answer.** It triggers the Greek test, but a treaty can still place you elsewhere. People pay Greek tax on foreign income they never owed simply because nobody applied the tie-breaker.
-- **Panicking at the surface facts.** A lease plus kids in school plus six months present *looks* like relocation. Whether it *is* depends on the treaty and the facts underneath, not the first impression.
+- **Panicking at the surface facts.** A lease plus kids in school plus six months present _looks_ like relocation. Whether it _is_ depends on the treaty and the facts underneath, not the first impression.
 - **Being right but undocumented.** An unproven position protects no one. If it is not on file, it does not help you when the question comes.
 - **Registering as a Greek resident "to be safe."** This can drag your worldwide income into Greek scope for no reason, when the correct move was to do nothing and document why.
 
@@ -73,4 +73,4 @@ If you are spending serious time in Greece but your home, income and family are 
 
 **Should I just register as a Greek tax resident to be safe?** Often the opposite. Registering brings your worldwide income into Greek scope, which may be exactly what you want to avoid. If a treaty places your residency abroad, the right move is usually to not file a change and to document why. An unnecessary change can create a tax bill that never needed to exist.
 
-*This article is general information reflecting Greek tax law and treaty practice as of July 2026. Treaty outcomes depend on your specific facts and the rules change often, so confirm your own position with a qualified adviser before making decisions.*
+_This article is general information reflecting Greek tax law and treaty practice as of July 2026. Treaty outcomes depend on your specific facts and the rules change often, so confirm your own position with a qualified adviser before making decisions._
