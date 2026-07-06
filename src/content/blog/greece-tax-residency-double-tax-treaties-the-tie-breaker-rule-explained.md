@@ -3,7 +3,7 @@ title: 'Greece Tax Residency & Double Tax Treaties: The Tie-Breaker Rule Explain
 seoTitle: ''
 description: Spend over 183 days in Greece but your life is abroad? A double tax treaty's tie-breaker rule can keep you tax resident elsewhere. Here's how it works.
 category: Tax residency
-pubDate: 2026-07-06T18:00
+pubDate: 2026-07-06T00:00
 updatedDate: ''
 readingTime: 9 min read
 draft: false
