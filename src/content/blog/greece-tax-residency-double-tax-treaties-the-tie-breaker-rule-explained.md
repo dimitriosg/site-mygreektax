@@ -3,10 +3,10 @@ title: 'Greece Tax Residency & Double Tax Treaties: The Tie-Breaker Rule Explain
 seoTitle: ''
 description: Spend over 183 days in Greece but your life is abroad? A double tax treaty's tie-breaker rule can keep you tax resident elsewhere. Here's how it works.
 category: Tax residency
-pubDate: 2026-07-06T22:56
+pubDate: 2026-07-06T18:00
 updatedDate: ''
 readingTime: 9 min read
-draft: true
+draft: false
 ogImage: ''
 ---
 
@@ -18,18 +18,15 @@ Most guides stop at the 183-day rule and leave you thinking that crossing it aut
 
 If you have read our guide on [the 183-day rule and Greek tax residency](/blog/greek-tax-resident-183-day-rule/), you already know the basics: spend more than 183 days in Greece in a twelve-month period, or have your permanent home or centre of vital interests here, and Greek law can treat you as a tax resident on your worldwide income.
 
-But Greek domestic law is only half of the equation. Greece has signed double taxation treaties with dozens of countries, and international treaties override domestic day-count rules when the two conflict. So it is entirely possible to be a Greek tax resident under Greek law *and* a resident of your home country under its law at the same time. When that happens, you are a "dual resident," and the treaty steps in to decide which country wins. That decision is made by something called the tie-breaker rule.
+But Greek domestic law is only half of the equation. Greece has signed double taxation treaties with dozens of countries, and international treaties override domestic day-count rules when the two conflict. So it is entirely possible to be a Greek tax resident under Greek law _and_ a resident of your home country under its law at the same time. When that happens, you are a "dual resident," and the treaty steps in to decide which country wins. That decision is made by something called the tie-breaker rule.
 
 ## What a double tax treaty tie-breaker actually does
 
 A tie-breaker rule is a sequence of tests, applied strictly in order, that assigns your tax residency to one country and one country only. As soon as a test gives a clear answer, you stop — you do not move on to the next one. Almost every treaty Greece has signed follows the same four-step cascade set out in the OECD model:
 
 1. **Permanent home.** Where do you have a home permanently available to you? If you have kept a home in your country and only rent temporarily in Greece, this test often points away from Greece. If you have a permanent home available in both countries, you move to the next test.
-
 2. **Centre of vital interests.** Where are your personal and economic ties strongest — your family, your main income, your business, your social and financial life? This is the test that decides most genuine dual-resident cases.
-
 3. **Habitual abode.** If the centre of vital interests cannot be determined, where do you actually, habitually spend your time?
-
 4. **Nationality.** If everything above is still unclear, your nationality decides. And if you are a national of both (or neither), the two tax authorities settle it between themselves.
 
 The key thing to understand: the tie-breaker does not care that you spent 200 days in Greece if the earlier tests already placed your residency abroad. Days matter for the domestic 183-day gate, but once a treaty is in play, the cascade above is what governs.
@@ -56,14 +53,14 @@ A defensible treaty position is a documented treaty position. If Greek authoriti
 - The specific treaty article and tie-breaker reasoning, set out in writing, so the position is on record rather than reconstructed after the fact.
 - Where relevant, evidence supporting the medical-stay basis. [JIM: confirm the exact document list AADE expects for the illness-based treatment and add it here.]
 
-The reason to prepare this *before* filing, not after a query lands, is simple: it turns a defensible argument into an already-documented fact. That is the difference between a quiet filing season and a stressful correspondence with the tax office.
+The reason to prepare this _before_ filing, not after a query lands, is simple: it turns a defensible argument into an already-documented fact. That is the difference between a quiet filing season and a stressful correspondence with the tax office.
 
 ## Where people get it wrong
 
 The most expensive mistakes we see in dual-residency cases all come from treating the 183-day count as the whole story:
 
 - **Assuming 183 days automatically equals Greek residency.** It triggers the domestic test, but a treaty can still place you elsewhere. People pay Greek tax on foreign income they never owed because nobody applied the tie-breaker.
-- **Reading the surface facts and panicking.** A leased home plus children in Greek school plus six months present *looks* like relocation. Whether it *is* depends on the treaty cascade and the underlying facts — the surface pattern is not the conclusion.
+- **Reading the surface facts and panicking.** A leased home plus children in Greek school plus six months present _looks_ like relocation. Whether it _is_ depends on the treaty cascade and the underlying facts — the surface pattern is not the conclusion.
 - **Taking the position but never documenting it.** An undocumented treaty position is a liability. If it isn't on file, it doesn't protect you when a query arrives.
 - **Filing a change of tax residency that was never required.** Some people proactively register as Greek tax residents "to be safe," dragging their worldwide income into Greek scope unnecessarily, when the correct move was to do nothing and document why.
 - **Leaving it too late.** Treaty relief and residency positions are far easier to establish before or at filing time than to unwind after an assessment has been issued.
@@ -88,4 +85,4 @@ If you are spending significant time in Greece but your home, income and family 
 
 **Should I file a change of tax residency to Greece just to be safe?** Often no. Registering as a Greek tax resident brings your worldwide income into Greek scope, which may be exactly what you want to avoid. If a treaty places your residency abroad, the correct action is usually to not file a change and to keep documentation supporting that position. Filing an unnecessary change can create tax exposure that did not otherwise exist.
 
-*The rules above reflect Greek tax law, treaty practice and filing procedures as of July 2026. Tax legislation, treaties and deadlines change frequently, and treaty outcomes depend on your specific facts — confirm current details with a qualified Greek tax advisor before making decisions.*
+_The rules above reflect Greek tax law, treaty practice and filing procedures as of July 2026. Tax legislation, treaties and deadlines change frequently, and treaty outcomes depend on your specific facts — confirm current details with a qualified Greek tax advisor before making decisions._
