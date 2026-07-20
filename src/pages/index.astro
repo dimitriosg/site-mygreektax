@@ -590,6 +590,12 @@ import NewsletterPopup from '../components/NewsletterPopup.astro';
           </div>
         </div>
 
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+          <label>Do not fill this field
+            <input type="text" name="hp_company" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+
         <input type="hidden" name="_subject" value="New consultation request — MyGreekTax">
         <button type="submit" class="btn btn-primary btn-lg form-submit">Send and get a callback</button>
         <p class="form-fine">We respond within one business day, Monday to Friday. Your details stay between us, never shared with third parties.</p>
