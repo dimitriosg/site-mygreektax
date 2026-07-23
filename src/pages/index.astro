@@ -509,7 +509,7 @@ import NewsletterPopup from '../components/NewsletterPopup.astro';
           situation, urgency, referral_source, referral_other, llm_name, llm_question)
           are relied on as-is by that Make scenario's mapping. Do not rename them
           without updating the scenario too. */}
-      <form id="consultation-form" action="https://hook.eu1.make.com/shl2hh7m5bqognij1ogonqlux7eho31p" method="POST" novalidate>
+      <form id="consultation-form" action="/api/lead" method="POST" novalidate>
         <div class="form-row">
           <div class="form-field">
             <label for="name">Your name</label>
