@@ -194,6 +194,7 @@
     if(form.querySelector('[name="mgt_hp"]').value){ return; } // bot
 
     var body=new URLSearchParams(); body.append('email', val); body.append('source', 'homepage_popup');
+    var hp=form.querySelector('[name="mgt_hp"]'); if(hp && hp.value) body.append('mgt_hp', hp.value);
 
     var done=function(){
       store('subscribed');
@@ -203,7 +204,7 @@
 
     if(WEBHOOK_URL.indexOf('PASTE_')===0){ done(); return; } // not wired yet → still show success in preview
 
-    fetch(WEBHOOK_URL,{method:'POST', body:body, mode:'no-cors'})
+    fetch(WEBHOOK_URL,{method:'POST', body:body})
       .then(done)
       .catch(done); // double opt-in confirms via email; optimistic success is safe
   });
