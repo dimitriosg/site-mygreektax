@@ -1,0 +1,28 @@
+{
+  // IMPORTANT: "name" must match the EXISTING Worker name shown in the
+  // Cloudflare dashboard (Compute, Workers and Pages, your project, Overview).
+  // A different name creates a SECOND Worker and mygreektax.eu keeps pointing
+  // at the old one.
+  "name": "site-mygreektax",
+
+  "main": "worker/index.js",
+  "compatibility_date": "2026-07-01",
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+
+    // Only these paths invoke the Worker. Everything else is served directly
+    // from static assets, so page views cost no Worker invocations. This also
+    // makes the Worker reachable regardless of not_found_handling.
+    "run_worker_first": ["/api/*"],
+
+    // Astro emits 404.html. Remove this line if the current deployment does
+    // not already behave this way and you want no change.
+    "not_found_handling": "404-page"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}
