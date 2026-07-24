@@ -6,7 +6,7 @@ category: Tax residency
 pubDate: 2026-07-24T18:23
 updatedDate: 2026-07-24T18:23
 readingTime: 10 min read
-draft: true
+draft: false
 ogImage: ''
 ---
 
@@ -17,7 +17,7 @@ Three years later, a letter arrives from the tax office asking you to explain wh
 This is one of the most common and least understood risks for foreigners in Greece, and the internet is full of alarming half-explanations of it. The reality is more reassuring than the scare stories suggest, but it depends entirely on one thing: whether you can still evidence the origin of the money at the moment somebody asks.
 
 > **The short version**
->
+> >
 > Greek law can tax an unexplained increase in your wealth at a flat **33%**. Most foreigners moving money into Greece fall into a category that is specifically exempt from having to justify it. But the exemption has to fit your dates, and the documentation has to still exist. Both are within your control if you plan ahead.
 
 **In this guide**
@@ -33,13 +33,13 @@ This is one of the most common and least understood risks for foreigners in Gree
 9. Common mistakes to avoid
 10. Frequently asked questions
 
----
+***
 
 ## 1. The rule: what "unexplained wealth" means in Greece
 
 Article 21(4) of Law 4172/2013, the Greek Income Tax Code, states that any increase in wealth arising from an unlawful, unjustified or unknown source or cause is treated as profit from business activity. Under Article 29, that profit is taxed at a flat rate of 33%.
 
-Read that carefully, because the wording is broader than most people expect. It does not say "illegal money". It says unlawful *or unjustified or unknown*. A completely legitimate transfer of your own savings becomes taxable if you cannot demonstrate where it came from.
+Read that carefully, because the wording is broader than most people expect. It does not say "illegal money". It says unlawful _or unjustified or unknown_. A completely legitimate transfer of your own savings becomes taxable if you cannot demonstrate where it came from.
 
 The tax applies to the amount itself. Not to your marginal rate, and not to a profit element. **It is 33% of the sum.**
 
@@ -47,7 +47,7 @@ Here is the part that gets left out of the frightening version of this story. Th
 
 The practical implication is that this is a **documentation problem, not a tax problem**. Which is good news, because documentation problems can be solved in advance.
 
----
+***
 
 ## 2. Why this catches expats in particular
 
@@ -63,7 +63,7 @@ Greek residents who have never left the country rarely trip over this rule, beca
 
 Large incoming transfers are, in themselves, a recognised trigger for a tax audit in Greece. That does not make them improper. It makes them worth preparing for.
 
----
+***
 
 ## 3. The exemptions: who does not have to prove anything
 
@@ -72,7 +72,7 @@ This is the section most articles on the subject skip, and it is the one that ma
 Article 34(2)(d) of Law 4172/2013 sets out the rule that imported foreign currency counts towards covering Greek presumptive expenditure tests, provided the taxpayer justifies how it was acquired abroad. It then lists three categories of person for whom **that justification is not required at all**.
 
 | Your situation when the money arrived | Justification required? |
-| --- | :---: |
+| --- | --- |
 | You were a tax resident of another state | **No** |
 | You had lived abroad at least 3 years, and the transfer happens within 2 years of relocating to Greece | **No** |
 | You had lived abroad at least 5 continuous years, and the money comes from deposits in your name or your spouse's name in an EU or EEA account, or a Greek bank branch abroad, opened while you lived abroad, or from deposits made within 1 year of relocating, and the funds were not re-exported | **No** |
@@ -83,20 +83,20 @@ Separately, Article 33 exempts foreign tax residents from the presumptive expend
 Put together, the typical picture is far less alarming than the headline. A British or American buyer purchasing a holiday home while remaining tax resident at home, or a retiree moving savings across within two years of relocating, is very often in an exempt category.
 
 > **Two things the exemption does not do**
->
+> >
 > It does not exempt you from anti-money-laundering checks by the bank, which are a separate regime with their own documentation demands. And it does not fill itself in. An exemption you never claimed, on a return you never filed, is not much use when a letter arrives four years later.
 
 Which category you fall into depends on precise dates: when you became a Greek tax resident, how long you lived abroad, when the account was opened, and when the money moved.
 
 > ### Not sure which category you are in?
->
+> >
 > That is the whole question, and it is answerable in about twenty minutes with your dates in front of you. We establish your residency position, identify which exemption applies, and tell you what needs to appear on your Greek return.
->
-> **[Book a free 30-minute consultation →](https://mygreektax.eu/#book)**
->
+> >
+> [**Book a free 30-minute consultation →**](https://mygreektax.eu/#book)
+> >
 > No commitment. All in English. Filings handled by a licensed OEE-registered Greek accountant.
 
----
+***
 
 ## 4. Where it goes on your tax return
 
@@ -105,10 +105,10 @@ Import of foreign currency by current or former residents abroad is declared on 
 It is a small administrative act with a large consequence. It converts a large unexplained credit into a declared, non-taxable capital import on the record, in the correct year.
 
 > **Do not use codes 783-784**
->
+> >
 > They look adjacent and they are not. Those codes exist only for the unused remainder of amounts placed under old capital repatriation schemes from 2004 and 2010. Taxpayers who declare amounts there may be referred to the tax office for audit. This is a genuinely common error, including in published guidance.
 
----
+***
 
 ## 5. What documentation actually holds up
 
@@ -127,7 +127,7 @@ The burden of proof sits with you. The tax authority need only establish that we
 
 That same case is worth remembering for a second reason. The taxpayer invoked a double taxation treaty and lost, because a treaty applies only where taxation in the source country is actually proven, not merely claimed. **A treaty is not a substitute for documents.**
 
----
+***
 
 ## 6. Why the date of the transfer matters
 
@@ -138,14 +138,14 @@ It means the question "was I a Greek tax resident when the money landed?" has a 
 People routinely get this backwards. They complete the move, settle in, and then bring the money over a year or two later without realising their position changed in the meantime.
 
 > ### Every key Greek tax date, in plain English
->
+> >
 > Filing windows, ENFIA, payment deadlines and the discount tiers, month by month, with a one-line explanation of what each one means for you.
->
-> **[Get the 2026 Expat Greek Tax Calendar →](https://mygreektax.eu/#newsletter)**
->
+> >
+> [**Get the 2026 Expat Greek Tax Calendar →**](https://mygreektax.eu/#newsletter)
+> >
 > Free. Plus a short note every other week, only when something actually needs your attention.
 
----
+***
 
 ## 7. Sending money to family: the gift trap
 
@@ -155,7 +155,7 @@ Money arriving in someone else's account can be treated as a donation and taxed 
 
 The usual way this is handled is to transfer into a joint account on which the sender is also a co-holder, so the money has not changed hands. Every movement on that account then needs to be justifiable in its own right. It is a straightforward arrangement, but it has to be set up before the transfer, not reconstructed afterwards.
 
----
+***
 
 ## 8. How far back can they look?
 
@@ -165,7 +165,7 @@ Greek courts have narrowed that extension considerably. Movements in domestic ba
 
 This matters for anyone worrying about a transfer from several years ago. The window is narrower than the folklore suggests. It is not, however, a reason to leave an undeclared transfer sitting on the record.
 
----
+***
 
 ## 9. Common mistakes to avoid
 
@@ -176,7 +176,7 @@ This matters for anyone worrying about a transfer from several years ago. The wi
 - **Using the wrong codes on the E1.** Particularly 783-784, which invites the audit you were trying to avoid.
 - **Bringing cash.** Above €10,000 it must be declared at customs, and depositing it into a Greek bank triggers detailed anti-money-laundering scrutiny. A transfer with a clear paper trail is almost always simpler.
 
----
+***
 
 ## 10. Frequently asked questions
 
@@ -208,13 +208,13 @@ The standard limitation period is five years from the end of the year in which t
 
 Money sent into a relative's account can be treated as a donation and taxed accordingly. One way this is commonly avoided is by transferring into a joint account on which the sender is a co-holder, but every movement on that account then needs to be justified. This is worth structuring correctly before the transfer rather than explaining afterwards.
 
----
+***
 
 > **General information, not advice**
->
+> >
 > This article explains how the rules are structured. It cannot tell you which category you fall into, because that depends on your dates, your residency history and your documents. Verified against Greek legislation and case law in July 2026. Greek tax rules and deadlines change frequently.
 
----
+***
 
 ## Moving money, or moving to Greece?
 
@@ -222,6 +222,6 @@ Most people discover this rule after the transfer, when the paperwork is harder 
 
 We work out your residency position, tell you which exemption applies to your dates, and make sure the transfer appears correctly on your Greek return. All in English, from start to finish, with every regulated filing handled by a licensed OEE-registered Greek accountant.
 
-**[Get a free 30-minute consultation →](https://mygreektax.eu/#book)**
+[**Get a free 30-minute consultation →**](https://mygreektax.eu/#book)
 
-*No commitment. We will tell you if you do not need us.*
+_No commitment. We will tell you if you do not need us._
