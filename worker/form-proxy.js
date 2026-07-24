@@ -75,10 +75,11 @@ function json(payload, status = 200) {
 // Same origin POSTs carry an Origin header in every current browser. Some
 // privacy setups strip it, so fall back to Referer before rejecting.
 function originAllowed(request) {
+  const allowed = [...ALLOWED_ORIGINS, new URL(request.url).origin];
   const origin = request.headers.get("origin");
-  if (origin) return ALLOWED_ORIGINS.includes(origin);
+  if (origin) return allowed.includes(origin);
   const referer = request.headers.get("referer") || "";
-  return ALLOWED_ORIGINS.some((allowed) => referer.startsWith(allowed + "/"));
+  return allowed.some((entry) => referer.startsWith(entry + "/"));
 }
 
 // index.astro posts FormData (multipart), NewsletterPopup.astro posts
