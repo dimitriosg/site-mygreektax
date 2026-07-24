@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
-
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts.map((post) => ({
@@ -9,7 +8,6 @@ export async function getStaticPaths() {
     props: { post },
   }));
 }
-
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
@@ -21,7 +19,252 @@ const { Content } = await render(post);
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
   readingTime={post.data.readingTime}
+  ogImage={post.data.ogImage}
   slug={post.slug}
 >
-  <Content />
+  <div class="post-body">
+    <Content />
+  </div>
 </BlogPost>
+
+<style is:global>
+/* ============================================================
+     MyGreekTax blog article styling.
+     is:global is required: Astro scopes styles by default and
+     scoped styles do not reach markdown-rendered HTML.
+     Scoped to .post-body so nothing else on the site is affected.
+     ============================================================ */
+
+  .post-body {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #2C3849;
+  }
+
+  /* ---------- TEXT ---------- */
+
+  .post-body p {
+    margin: 0 0 22px 0;
+  }
+
+  .post-body strong {
+    color: #1E2A3A;
+    font-weight: 600;
+  }
+
+  .post-body a {
+    color: #C9923A;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .post-body a:hover {
+    color: #A97A2B;
+  }
+
+  /* ---------- HEADINGS ---------- */
+
+  .post-body h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #1E2A3A;
+    margin: 56px 0 20px 0;
+    padding-top: 34px;
+    border-top: 1px solid rgba(30,42,58,0.12);
+  }
+
+  .post-body h2:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .post-body h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #1E2A3A;
+    margin: 34px 0 14px 0;
+  }
+
+  /* ---------- LISTS ---------- */
+
+  .post-body ul,
+  .post-body ol {
+    margin: 0 0 24px 0;
+    padding-left: 22px;
+  }
+
+  .post-body li {
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+
+  .post-body li::marker {
+    color: #C9923A;
+  }
+
+  /* ---------- CALLOUT (every blockquote) ---------- */
+
+  .post-body blockquote {
+    background: #F2EDE4;
+    border-left: 3px solid #C9923A;
+    border-radius: 0 8px 8px 0;
+    margin: 32px 0;
+    padding: 22px 26px;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: rgba(30,42,58,0.82);
+  }
+
+  .post-body blockquote p {
+    margin: 0 0 12px 0;
+  }
+
+  .post-body blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .post-body blockquote strong {
+    color: #1E2A3A;
+  }
+
+  /* ---------- CTA (any blockquote containing a heading) ----------
+     This is what turns the three CTA blocks into cards without
+     changing a single character of the markdown. */
+
+  .post-body blockquote:has(h3) {
+    background: #1E2A3A;
+    border-left: none;
+    border-radius: 12px;
+    padding: 36px 38px 34px;
+    margin: 48px 0;
+    text-align: center;
+    color: rgba(255,255,255,0.72);
+    font-size: 16px;
+  }
+
+  .post-body blockquote:has(h3) h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 25px;
+    color: #FFFFFF;
+    margin: 0 0 14px 0;
+  }
+
+  .post-body blockquote:has(h3) strong {
+    color: #FFFFFF;
+  }
+
+  .post-body blockquote:has(h3) p {
+    margin: 0 0 20px 0;
+  }
+
+  .post-body blockquote:has(h3) p:last-child {
+    margin-bottom: 0;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* the button */
+  .post-body blockquote:has(h3) a {
+    display: inline-block;
+    background: #C9923A;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px 30px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: background 0.2s;
+  }
+
+  .post-body blockquote:has(h3) a:hover {
+    background: #B8812E;
+    color: #FFFFFF;
+  }
+
+  .post-body blockquote:has(h3) a strong {
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
+  /* ---------- TABLE ---------- */
+
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0 36px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .post-body thead th {
+    background: #1E2A3A;
+    color: #FFFFFF;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    padding: 14px 18px;
+    vertical-align: bottom;
+  }
+
+  .post-body tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(30,42,58,0.14);
+    color: rgba(30,42,58,0.85);
+    vertical-align: top;
+  }
+
+  .post-body tbody tr:nth-child(even) td {
+    background: #F2EDE4;
+  }
+
+  .post-body tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* right-hand answer column reads as a verdict */
+  .post-body tbody td:last-child {
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #1E2A3A;
+  }
+
+  /* ---------- DIVIDER ---------- */
+
+  .post-body hr {
+    border: none;
+    border-top: 1px solid rgba(30,42,58,0.12);
+    margin: 48px 0;
+  }
+
+  /* the markdown puts --- right after several blockquotes,
+     which doubles up the separation. Suppress those. */
+  .post-body blockquote + hr {
+    display: none;
+  }
+
+  /* ---------- MOBILE ---------- */
+
+  @media (max-width: 700px) {
+    .post-body { font-size: 16px; }
+    .post-body h2 { font-size: 25px; margin-top: 42px; }
+    .post-body blockquote:has(h3) { padding: 28px 22px; }
+    .post-body table { display: block; overflow-x: auto; white-space: normal; }
+    .post-body tbody td:last-child { white-space: normal; }
+  }
+
+  /* ---------- FALLBACK for browsers without :has() ----------
+     Very old browsers will show the CTAs as ordinary callouts
+     rather than dark cards. Still perfectly readable, so no
+     further action needed. */
+</style>
