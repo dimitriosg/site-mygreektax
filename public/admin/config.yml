@@ -29,6 +29,8 @@ collections:
     sortable_fields: ["pubDate", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL slug", name: "slug", widget: "string", required: false,
+          hint: "Short, lowercase, hyphens. Leave blank to use the title." }
       - { label: "SEO Title (optional, overrides browser tab / meta title)", name: "seoTitle", widget: "string", required: false }
       - { label: "Description (meta description, ~155 chars)", name: "description", widget: "text" }
       - label: "Category"
