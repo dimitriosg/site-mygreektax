@@ -7,7 +7,7 @@ pubDate: 2026-07-24T18:23
 updatedDate: 2026-07-24T18:23
 readingTime: 10 min read
 draft: false
-ogImage: ''
+ogImage: /images/blog/og_bringing_money_A.png
 ---
 
 You sold a flat in Manchester, wired the proceeds to your Greek bank account, and bought a house outside Kalamata. Or you moved your life savings across to fund the first two years in Athens while you found your feet. Either way, a large sum landed in a Greek account, and nobody at the bank raised an eyebrow.
