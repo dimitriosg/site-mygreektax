@@ -2,7 +2,7 @@
 title: 'Bringing Money into Greece as a Foreigner: The Tax Rules Nobody Explains'
 seoTitle: ''
 description: Transferring savings into Greece to buy property or fund your move? Greek law can tax unexplained wealth at 33%. Here is who is exempt, where it goes on your tax return, and what documentation actually holds up.
-category: Tax residency
+category: Property
 pubDate: 2026-07-24T18:23
 updatedDate: 2026-07-24T18:23
 readingTime: 10 min read
