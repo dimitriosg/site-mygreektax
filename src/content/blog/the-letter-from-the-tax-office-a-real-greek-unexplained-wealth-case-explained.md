@@ -1,13 +1,13 @@
 ---
-title: 'The Letter From the Tax Office: A Real Greek Unexplained-Wealth Case, Explained'
+title: 'The Letter From the Tax Office: A Real Greek Unexplained-Wealth Case'
 slug: tax-office-letter-unexplained-money
-seoTitle: ''
+seoTitle: 'When Greece Taxes Money You Cannot Explain: A Real 2026 Case'
 description: A foreign buyer got a tax-office letter three years after wiring funds to Greece. How the unexplained wealth rule works, and a real case it cost 155,000 euros.
 category: Tax residency
 pubDate: 2026-07-27T10:43
 updatedDate: ''
 readingTime: 8 min read
-draft: true
+draft: false
 ogImage: ''
 ---
 
@@ -29,7 +29,7 @@ Nothing about this is unusual. Large incoming transfers are a recognised trigger
 
 Article 21(4) of Law 4172/2013, the Greek Income Tax Code, treats an increase in wealth arising from an unlawful, unjustified or unknown source as profit from business activity. Under Article 29, that profit is taxed at a flat rate of 33 percent, applied to the sum itself and not to a margin.
 
-Read the wording closely and the reassurance is already in it. The law does not say *illegal* money. It says unlawful, or unjustified, or unknown. Where the origin of a credit is clear and documented, there is no unexplained wealth increase, and the provision simply does not apply. The letter is a request for evidence, not a verdict.
+Read the wording closely and the reassurance is already in it. The law does not say _illegal_ money. It says unlawful, or unjustified, or unknown. Where the origin of a credit is clear and documented, there is no unexplained wealth increase, and the provision simply does not apply. The letter is a request for evidence, not a verdict.
 
 > **The one-line version.** This is a documentation problem, not a tax problem. Money with a clear, evidenced history is safe. Money whose history can no longer be shown is exposed, however honestly it was earned. Everything below turns on that distinction.
 
@@ -40,7 +40,7 @@ To see what happens when the evidence is not there, look at a decision reported 
 The audit had centred on three cash deposits into joint bank accounts, of 200,000 euros, 18,170 euros and 50,000 euros, totalling 268,170 euros. The taxpayer argued the money came from already taxed income of earlier years, such as pensions, rents, interest and dividends, that had been withdrawn from other accounts and then redeposited, and that redepositing your own money is not prohibited.
 
 > **The decision, in short.** The ΔΕΔ found the taxpayer's claims unproven. The real origin of the deposits was not sufficiently documented, and there was no evidence the amounts had already been taxed or were lawfully exempt. The deposits were therefore treated as an increase in wealth of unknown source under Article 21(4), and the full assessment stood.
->
+> >
 > The explanation may well have been entirely true. It did not matter, because it could not be shown. That is the whole lesson in a single decision.
 
 Two features of that case are worth naming plainly, because they are exactly what made it go the way it did. The money went in as **cash**, which carries no built-in record of where it came from. And the taxpayer appears to have been a **Greek resident**, so none of the exemptions that protect recent arrivals from abroad were in play. Neither of those things was true for Alan.
@@ -49,8 +49,8 @@ Two features of that case are worth naming plainly, because they are exactly wha
 
 It is tempting to read a 155,000 euro headline and assume the worst about your own transfer. The more useful reading is that the same provision produces opposite results depending on two things you can largely control: whether the money arrived with a paper trail, and whether your dates place you inside one of the exemptions.
 
-| | The 2026 ΔΕΔ case | Alan's transfer |
-|---|---|---|
+|  | The 2026 ΔΕΔ case | Alan's transfer |
+| --- | --- | --- |
 | **How the money arrived** | Cash deposits, no inherent record | Bank transfer, full trail from a UK sale |
 | **Residency when it landed** | Greek resident, no relocation exemption | Still UK resident, inside the relocation window |
 | **Could the source be evidenced?** | No, claims remained unproven | Yes, sale contract and statements existed |
@@ -104,6 +104,6 @@ Try to reconstruct the record before it is needed rather than after. Request ful
 **Does a case like the 155,000 euro one apply to foreigners bringing money into Greece?**
 The same legal provision applies to everyone, but that particular case involved undocumented cash deposits by a Greek resident who could not prove the money had already been taxed. Most foreigners who move funds by bank transfer, keep the paper trail, and arrive within the relevant relocation window fall into a category that is specifically exempt from having to justify the source. The rule that caught that taxpayer is the same rule that leaves most documented expat transfers untouched. The difference is evidence.
 
----
+***
 
-*Alan is an illustrative example used to explain how the rules work in practice, not a specific identifiable client. The 2026 decision described is a real determination of the Dispute Resolution Directorate as reported in the Greek press in July 2026, summarised here for general information. This article explains how the rules are structured, it cannot tell you which category you fall into, because that depends on your dates, your residency history and your documents. Greek tax rules and deadlines change frequently.*
+_Alan is an illustrative example used to explain how the rules work in practice, not a specific identifiable client. The 2026 decision described is a real determination of the Dispute Resolution Directorate as reported in the Greek press in July 2026, summarised here for general information. This article explains how the rules are structured, it cannot tell you which category you fall into, because that depends on your dates, your residency history and your documents. Greek tax rules and deadlines change frequently._
