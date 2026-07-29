@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main style="max-width:720px;margin:0 auto;padding:4rem 1.5rem;font-family:'DM Sans',sans-serif;color:#28251d;">
     <a href="/" style="font-size:0.875rem;color:#C9923A;text-decoration:none;">← Back to MyGreekTax</a>
     <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;margin:1.5rem 0 0.5rem;">Privacy Policy</h1>
-    <p style="color:#7a7974;margin-bottom:2.5rem;">Last updated: 28 July 2026</p>
+    <p style="color:#7a7974;margin-bottom:2.5rem;">Last updated: 29 July 2026</p>
     <h2 style="font-size:1.25rem;margin:2rem 0 0.5rem;">1. Who We Are</h2>
     <p>MyGreekTax is operated by Dimitrios Gkikas, a licensed Greek tax professional. Contact: <a href="mailto:hello@mygreektax.eu" style="color:#C9923A;">hello@mygreektax.eu</a></p>
     <h2 style="font-size:1.25rem;margin:2rem 0 0.5rem;">2. Data We Collect</h2>
@@ -17,6 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p style="margin-top:0.75rem;">If you go on to become a client, we also hold the case information you send us — correspondence, documents, and the details needed for the filings you have asked us to handle — in our client portal at portal.mygreektax.eu. If you choose to use our secure credential form, we additionally hold an encrypted copy of the TAXISnet details you submit through it. Section 4 explains that in full.</p>
     <h2 style="font-size:1.25rem;margin:2rem 0 0.5rem;">3. How We Use Your Data</h2>
     <p>Your data is used solely to respond to your enquiry and to carry out the work you have engaged us for. We do not sell, rent, or share your personal data with third parties except where required by law or where necessary to deliver the service you asked for — principally our licensed Greek accountant partner, who carries out regulated filings under a formal authorisation you grant.</p>
+    <p style="margin-top:0.75rem;"><strong>AI-assisted drafting.</strong> To reply to you promptly and consistently, we use an AI model to prepare a first draft of our replies. Where we do, your correspondence on the case is sent to that model to give it the context it needs. The model runs on Amazon Web Services in the EU (Stockholm) and is not used to train anyone's model. No draft is ever sent to you automatically: a member of our team reads, edits where needed, and approves every reply before it leaves. There is no automated decision-making that produces legal or similarly significant effects for you.</p>
     <h2 id="taxisnet-credentials" style="font-size:1.25rem;margin:2rem 0 0.5rem;scroll-margin-top:100px;">4. TAXISnet Credentials (Optional)</h2>
     <p>We do not need your TAXISnet password in order to act for you. The standard route is a formal <em>εξουσιοδότηση</em> (authorisation) that you grant through myAADE, scoped to the specific filing. Your account stays under your sole control, and this remains our recommended approach.</p>
     <p style="margin-top:0.75rem;">Some clients would rather we register that authorisation on their behalf than do it themselves. Where you ask us to, we send you a one-time link to a secure form on our portal. Using it is entirely voluntary and is never a condition of any service. If you do use it, this is exactly what happens:</p>
@@ -37,6 +38,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <li><strong>Supabase</strong> — the database behind our client portal, where client and case records are stored. Encrypted credential submissions are stored here as ciphertext only.</li>
       <li><strong>Cloudflare</strong> — hosts and serves this site and our client portal.</li>
       <li><strong>Mailgun (Sinch)</strong> — delivers the email we send you about your case.</li>
+      <li><strong>Amazon Web Services (Bedrock)</strong> — hosts the AI model that drafts our replies, in the EU (Stockholm) region. Your correspondence is processed there to produce a draft and is not used to train the model.</li>
       <li><strong>Plausible Analytics</strong> — cookie-free, GDPR-compliant analytics. No personal data stored.</li>
       <li><strong>Google Fonts</strong> — fonts loaded from Google's CDN; your IP may be logged by Google.</li>
     </ul>
