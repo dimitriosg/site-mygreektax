@@ -21,15 +21,23 @@ export default {
     const path = url.pathname.replace(/\/+$/, "") || "/";
 
     // Diagnostic. Proves the Worker is being invoked and reports which secrets
-    // are present. Secrets are reported as booleans only, never values.
+    // are present. Webhook and Turnstile secrets are reported as booleans only,
+    // never values. NEWSLETTER_TARGET is echoed in full on purpose: it is held
+    // as a Secret for durability against deploys, not because it is sensitive.
     //
     // newsletterTargetSource distinguishes "NEWSLETTER_TARGET says make" from
     // "the binding is absent and make is the fallback". Those two look
     // identical in newsletterTarget alone, which is what made a wiped variable
-    // read as a deliberate setting. newsletterOrder is the honest answer to
-    // "where does a signup actually go", because it reflects the real ordering
-    // after the configured-URL filter. It holds only the names "n8n" and
-    // "make", never a webhook URL.
+    // read as a deliberate setting. It tests for the binding existing rather
+    // than for a truthy value, so an empty string reads as configured-but-empty
+    // instead of masquerading as absent.
+    //
+    // newsletterTarget echoes the normalised value as set, and is deliberately
+    // NOT coerced to one of the two known names: a typo needs to be visible
+    // here rather than silently rounded to "make". newsletterOrder is then the
+    // honest answer to "where does a signup actually go", because it reflects
+    // the real ordering after the configured-URL filter. It holds only the
+    // names "n8n" and "make", never a webhook URL.
     if (path === "/api/health") {
       return Response.json({
         ok: true,
@@ -43,7 +51,8 @@ export default {
         newsletterTarget: String(env.NEWSLETTER_TARGET || "make")
           .trim()
           .toLowerCase(),
-        newsletterTargetSource: env.NEWSLETTER_TARGET ? "configured" : "default",
+        newsletterTargetSource:
+          typeof env.NEWSLETTER_TARGET === "undefined" ? "default" : "configured",
         newsletterOrder: newsletterTargets(env).map(([name]) => name),
       });
     }

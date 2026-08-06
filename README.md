@@ -105,11 +105,15 @@ curl -sS https://mygreektax.eu/api/health
 
 Expect `{"ok":true,"worker":"live","secrets":{...}}` with all four booleans true, plus three newsletter fields:
 
-- `newsletterTarget`, `"n8n"` or `"make"`
-- `newsletterTargetSource`, `"configured"` when `NEWSLETTER_TARGET` is set on the Worker, `"default"` when the binding is absent and `make` is only the fallback
+- `newsletterTarget`, the configured value trimmed and lowercased, normally `"n8n"` or `"make"`. It is echoed as set rather than coerced, so a typo shows up here instead of being silently rounded to `make`
+- `newsletterTargetSource`, `"configured"` when `NEWSLETTER_TARGET` exists on the Worker, `"default"` when the binding is absent and `make` is only the fallback. It tests for the binding, not for a truthy value, so an empty setting reads as `configured` with an empty target rather than pretending to be absent
 - `newsletterOrder`, the platforms a signup is actually tried against, in order, e.g. `["n8n","make"]`. Names only, never URLs
 
-`newsletterTargetSource: "default"` on a Worker that is supposed to be on n8n means the variable is missing, not that somebody chose Make. If `newsletterOrder` is shorter than two entries, one of the two webhook secrets is missing and there is no failover.
+Read them together:
+
+- `newsletterTargetSource: "default"` on a Worker that is supposed to be on n8n means the value is missing, not that somebody chose Make.
+- `newsletterTarget` showing anything other than `n8n` or `make` is a typo. `newsletterOrder` tells you what it is actually doing, which is Make first, since only `n8n` selects n8n.
+- `newsletterOrder` shorter than two entries means one of the two webhook secrets is missing and there is no failover. `[]` means neither is set and `/api/subscribe` is returning 500.
 
 ### Sveltia CMS OAuth Worker
 

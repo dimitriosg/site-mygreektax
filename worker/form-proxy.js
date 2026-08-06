@@ -18,8 +18,9 @@
 //   TURNSTILE_SECRET_KEY     optional. Verification is SKIPPED when unset,
 //                            so the proxy can go live before the widget does.
 //
-// Plaintext variable (not a secret):
-//   NEWSLETTER_TARGET        "n8n" or "make", see newsletterTargets() below
+//   NEWSLETTER_TARGET        "n8n" or "make", see newsletterTargets() below.
+//                            Not sensitive, but store it as a Secret anyway,
+//                            for the reason given there.
 
 const ALLOWED_ORIGINS = [
   "https://mygreektax.eu",
@@ -138,10 +139,18 @@ async function forward(webhookUrl, params) {
 
 // Newsletter delivery targets, in priority order.
 //
-// NEWSLETTER_TARGET is a plaintext variable, not a secret, so switching
-// platforms is a one word edit in the Cloudflare dashboard with no deploy.
+// NEWSLETTER_TARGET selects the primary, so switching platforms is a one word
+// edit in the Cloudflare dashboard with no deploy.
 //   "n8n"  -> n8n first, Make as standby
-//   "make" -> Make first, n8n as standby (default)
+//   "make" -> Make first, n8n as standby (the fallback for any other value,
+//             including the binding being absent)
+//
+// STORE IT AS A SECRET, not as a plaintext variable, even though the value is
+// not sensitive. `wrangler deploy` deletes plaintext vars that are absent from
+// wrangler.jsonc and Workers Builds runs it on every push to main, so a
+// plaintext NEWSLETTER_TARGET gets wiped and silently reverts to the "make"
+// fallback. Secrets are never deleted by a deployment. This already happened
+// once. wrangler.jsonc also sets keep_vars as a second line of defence.
 //
 // Whichever platform is not in charge stays a live standby: if the primary does
 // not answer 2xx the other is tried immediately, so a restart of the n8n host
