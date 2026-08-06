@@ -148,7 +148,7 @@ async function forward(webhookUrl, params) {
 // does not lose a signup. Both paths are idempotent, the Supabase insert is
 // on conflict do nothing and EmailOctopus returns 409 for an existing contact,
 // so a double delivery is harmless.
-function newsletterTargets(env) {
+export function newsletterTargets(env) {
   const preferN8n =
     String(env.NEWSLETTER_TARGET || "make").trim().toLowerCase() === "n8n";
   const ordered = preferN8n

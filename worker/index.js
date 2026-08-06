@@ -13,7 +13,7 @@
 // form. If run_worker_first is ever not in effect, /api/lead gets redirected
 // before this code sees it. Accepting both spellings costs one line and
 // removes a whole class of confusing failure.
-import { handleLead, handleSubscribe } from "./form-proxy.js";
+import { handleLead, handleSubscribe, newsletterTargets } from "./form-proxy.js";
 
 export default {
   async fetch(request, env) {
@@ -21,7 +21,15 @@ export default {
     const path = url.pathname.replace(/\/+$/, "") || "/";
 
     // Diagnostic. Proves the Worker is being invoked and reports which secrets
-    // are present. Reports booleans only, never values.
+    // are present. Secrets are reported as booleans only, never values.
+    //
+    // newsletterTargetSource distinguishes "NEWSLETTER_TARGET says make" from
+    // "the binding is absent and make is the fallback". Those two look
+    // identical in newsletterTarget alone, which is what made a wiped variable
+    // read as a deliberate setting. newsletterOrder is the honest answer to
+    // "where does a signup actually go", because it reflects the real ordering
+    // after the configured-URL filter. It holds only the names "n8n" and
+    // "make", never a webhook URL.
     if (path === "/api/health") {
       return Response.json({
         ok: true,
@@ -35,6 +43,8 @@ export default {
         newsletterTarget: String(env.NEWSLETTER_TARGET || "make")
           .trim()
           .toLowerCase(),
+        newsletterTargetSource: env.NEWSLETTER_TARGET ? "configured" : "default",
+        newsletterOrder: newsletterTargets(env).map(([name]) => name),
       });
     }
 

@@ -8,6 +8,13 @@
   "main": "worker/index.js",
   "compatibility_date": "2026-07-01",
 
+  // By default `wrangler deploy` DELETES every plaintext variable on the Worker
+  // that is not listed in this file, and Workers Builds runs it on every push
+  // to main. That is how NEWSLETTER_TARGET, set in the dashboard, silently
+  // reverted to the "make" fallback with nobody touching it. This preserves
+  // dashboard-set vars across deploys. Secrets are never deleted either way.
+  "keep_vars": true,
+
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
