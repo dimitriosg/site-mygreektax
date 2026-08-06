@@ -29,8 +29,12 @@ export default {
         secrets: {
           MAKE_FORM_WEBHOOK: Boolean(env.MAKE_FORM_WEBHOOK),
           MAKE_NEWSLETTER_WEBHOOK: Boolean(env.MAKE_NEWSLETTER_WEBHOOK),
+          N8N_NEWSLETTER_WEBHOOK: Boolean(env.N8N_NEWSLETTER_WEBHOOK),
           TURNSTILE_SECRET_KEY: Boolean(env.TURNSTILE_SECRET_KEY),
         },
+        newsletterTarget: String(env.NEWSLETTER_TARGET || "make")
+          .trim()
+          .toLowerCase(),
       });
     }
 

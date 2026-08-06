@@ -41,8 +41,10 @@ Both forms post to same-origin paths, never directly to Make. The Make webhook U
 | Path | Source | Forwards to |
 |---|---|---|
 | `/api/lead` | consultation form in `index.astro` | `MAKE_FORM_WEBHOOK` |
-| `/api/subscribe` | newsletter popup in `NewsletterPopup.astro` | `MAKE_NEWSLETTER_WEBHOOK` |
-| `/api/health` | diagnostic, GET only | nothing, reports which secrets are set |
+| `/api/subscribe` | newsletter popup in `NewsletterPopup.astro` | whichever of `N8N_NEWSLETTER_WEBHOOK` or `MAKE_NEWSLETTER_WEBHOOK` the `NEWSLETTER_TARGET` variable selects, with automatic failover to the other |
+| `/api/health` | diagnostic, GET only | nothing, reports which secrets are set and which newsletter target is selected |
+
+`NEWSLETTER_TARGET` is a **plaintext** variable, not a secret, so switching newsletter platforms is a one word edit in the Cloudflare dashboard with no deploy. `n8n` puts n8n first and Make on standby, `make` (the default when the variable is unset) puts Make first and n8n on standby. The platform that is not in charge stays a live standby: if the primary does not answer 2xx the other is tried immediately, so a restart of the n8n host does not lose a signup. Both paths are idempotent, so the retry cannot produce a duplicate subscriber.
 
 Requests are rejected at the edge, before any Make operation is spent, when: the origin is not allowed, the honeypot field is filled (`hp_company` on the form, `mgt_hp` on the popup), the Turnstile token is missing or invalid, a required field is absent, the email fails a format check, or `status` / `referral_source` fall outside the allowed values. The allowed value lists mirror the router filter in the Make scenario, so keep the two in sync.
 
@@ -55,8 +57,15 @@ Set these on the Worker (Settings, Variables and secrets) as **Secret**, not pla
 | Name | Purpose |
 |---|---|
 | `MAKE_FORM_WEBHOOK` | consultation form hook |
-| `MAKE_NEWSLETTER_WEBHOOK` | newsletter popup hook |
+| `MAKE_NEWSLETTER_WEBHOOK` | newsletter popup hook, Make |
+| `N8N_NEWSLETTER_WEBHOOK` | newsletter popup hook, n8n production webhook URL |
 | `TURNSTILE_SECRET_KEY` | Turnstile verification. When unset, verification is skipped, which is the intended way to stage a rollout or to disable Turnstile fast without a deploy |
+
+One newsletter variable is deliberately **not** a secret, because the point of it is to be edited quickly and read back from `/api/health`:
+
+| Name | Purpose |
+|---|---|
+| `NEWSLETTER_TARGET` | plaintext. `n8n` or `make`, selects the primary newsletter platform. Defaults to `make` when unset |
 
 The Turnstile **site key** is public by design and is hardcoded in `index.astro`. Only the secret key is sensitive.
 
