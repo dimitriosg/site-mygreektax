@@ -36,15 +36,15 @@ npm run preview
 
 ## Form endpoints
 
-Both forms post to same-origin paths, never directly to Make. The Make webhook URLs live in encrypted Worker secrets.
+Both forms post to same-origin paths, never directly to Make or n8n. The webhook URLs live in encrypted Worker secrets.
 
 | Path | Source | Forwards to |
 |---|---|---|
 | `/api/lead` | consultation form in `index.astro` | `MAKE_FORM_WEBHOOK` |
-| `/api/subscribe` | newsletter popup in `NewsletterPopup.astro` | whichever of `N8N_NEWSLETTER_WEBHOOK` or `MAKE_NEWSLETTER_WEBHOOK` the `NEWSLETTER_TARGET` variable selects, with automatic failover to the other |
-| `/api/health` | diagnostic, GET only | nothing, reports which secrets are set and which newsletter target is selected |
+| `/api/subscribe` | newsletter popup in `NewsletterPopup.astro` | whichever of `N8N_NEWSLETTER_WEBHOOK` or `MAKE_NEWSLETTER_WEBHOOK` is selected by `NEWSLETTER_TARGET`, with automatic failover to the other on any non-2xx |
+| `/api/health` | diagnostic, GET only | nothing, reports which secrets are set and where a signup would actually go |
 
-`NEWSLETTER_TARGET` is a **plaintext** variable, not a secret, so switching newsletter platforms is a one word edit in the Cloudflare dashboard with no deploy. `n8n` puts n8n first and Make on standby, `make` (the default when the variable is unset) puts Make first and n8n on standby. The platform that is not in charge stays a live standby: if the primary does not answer 2xx the other is tried immediately, so a restart of the n8n host does not lose a signup. Both paths are idempotent, so the retry cannot produce a duplicate subscriber.
+`NEWSLETTER_TARGET` selects the primary newsletter platform: `n8n` puts n8n first and Make on standby, `make` (the fallback when the variable is absent) puts Make first and n8n on standby. The platform that is not in charge stays a live standby: if the primary does not answer 2xx the other is tried immediately, so a restart of the n8n host does not lose a signup. Both paths are idempotent, so the retry cannot produce a duplicate subscriber.
 
 Requests are rejected at the edge, before any Make operation is spent, when: the origin is not allowed, the honeypot field is filled (`hp_company` on the form, `mgt_hp` on the popup), the Turnstile token is missing or invalid, a required field is absent, the email fails a format check, or `status` / `referral_source` fall outside the allowed values. The allowed value lists mirror the router filter in the Make scenario, so keep the two in sync.
 
@@ -59,13 +59,12 @@ Set these on the Worker (Settings, Variables and secrets) as **Secret**, not pla
 | `MAKE_FORM_WEBHOOK` | consultation form hook |
 | `MAKE_NEWSLETTER_WEBHOOK` | newsletter popup hook, Make |
 | `N8N_NEWSLETTER_WEBHOOK` | newsletter popup hook, n8n production webhook URL |
+| `NEWSLETTER_TARGET` | `n8n` or `make`, selects the primary newsletter platform. Falls back to `make` when absent |
 | `TURNSTILE_SECRET_KEY` | Turnstile verification. When unset, verification is skipped, which is the intended way to stage a rollout or to disable Turnstile fast without a deploy |
 
-One newsletter variable is deliberately **not** a secret, because the point of it is to be edited quickly and read back from `/api/health`:
+`NEWSLETTER_TARGET` must be stored as a **Secret** even though its value is not sensitive, because `wrangler deploy` deletes plaintext variables that are absent from `wrangler.jsonc` and Workers Builds runs it on every push to `main`, whereas secrets are never deleted by a deployment. Setting it as a plaintext variable is how it silently reverted to `make` once already. `wrangler.jsonc` also sets `"keep_vars": true` as a second line of defence for any plaintext variable added later.
 
-| Name | Purpose |
-|---|---|
-| `NEWSLETTER_TARGET` | plaintext. `n8n` or `make`, selects the primary newsletter platform. Defaults to `make` when unset |
+Because the value is not sensitive, `/api/health` reports it back in full, along with whether it was configured or defaulted.
 
 The Turnstile **site key** is public by design and is hardcoded in `index.astro`. Only the secret key is sensitive.
 
@@ -104,7 +103,17 @@ Branch builds are enabled, so push to a branch and check the preview before merg
 curl -sS https://mygreektax.eu/api/health
 ```
 
-Expect `{"ok":true,"worker":"live","secrets":{...}}` with all three booleans true.
+Expect `{"ok":true,"worker":"live","secrets":{...}}` with all four booleans true, plus three newsletter fields:
+
+- `newsletterTarget`, the configured value trimmed and lowercased, normally `"n8n"` or `"make"`. It is echoed as set rather than coerced, so a typo shows up here instead of being silently rounded to `make`
+- `newsletterTargetSource`, `"configured"` when `NEWSLETTER_TARGET` exists on the Worker, `"default"` when the binding is absent and `make` is only the fallback. It tests for the binding, not for a truthy value, so an empty setting reads as `configured` with an empty target rather than pretending to be absent
+- `newsletterOrder`, the platforms a signup is actually tried against, in order, e.g. `["n8n","make"]`. Names only, never URLs
+
+Read them together:
+
+- `newsletterTargetSource: "default"` on a Worker that is supposed to be on n8n means the value is missing, not that somebody chose Make.
+- `newsletterTarget` showing anything other than `n8n` or `make` is a typo. `newsletterOrder` tells you what it is actually doing, which is Make first, since only `n8n` selects n8n.
+- `newsletterOrder` shorter than two entries means one of the two webhook secrets is missing and there is no failover. `[]` means neither is set and `/api/subscribe` is returning 500.
 
 ### Sveltia CMS OAuth Worker
 
