@@ -13,9 +13,13 @@
 //
 // Secrets expected (Worker settings, Variables and secrets):
 //   MAKE_FORM_WEBHOOK        consultation form hook
-//   MAKE_NEWSLETTER_WEBHOOK  newsletter popup hook
+//   MAKE_NEWSLETTER_WEBHOOK  newsletter popup hook, Make
+//   N8N_NEWSLETTER_WEBHOOK   newsletter popup hook, n8n
 //   TURNSTILE_SECRET_KEY     optional. Verification is SKIPPED when unset,
 //                            so the proxy can go live before the widget does.
+//
+// Plaintext variable (not a secret):
+//   NEWSLETTER_TARGET        "n8n" or "make", see newsletterTargets() below
 
 const ALLOWED_ORIGINS = [
   "https://mygreektax.eu",
@@ -132,6 +136,33 @@ async function forward(webhookUrl, params) {
   return Boolean(upstream && upstream.ok);
 }
 
+// Newsletter delivery targets, in priority order.
+//
+// NEWSLETTER_TARGET is a plaintext variable, not a secret, so switching
+// platforms is a one word edit in the Cloudflare dashboard with no deploy.
+//   "n8n"  -> n8n first, Make as standby
+//   "make" -> Make first, n8n as standby (default)
+//
+// Whichever platform is not in charge stays a live standby: if the primary does
+// not answer 2xx the other is tried immediately, so a restart of the n8n host
+// does not lose a signup. Both paths are idempotent, the Supabase insert is
+// on conflict do nothing and EmailOctopus returns 409 for an existing contact,
+// so a double delivery is harmless.
+function newsletterTargets(env) {
+  const preferN8n =
+    String(env.NEWSLETTER_TARGET || "make").trim().toLowerCase() === "n8n";
+  const ordered = preferN8n
+    ? [
+        ["n8n", env.N8N_NEWSLETTER_WEBHOOK],
+        ["make", env.MAKE_NEWSLETTER_WEBHOOK],
+      ]
+    : [
+        ["make", env.MAKE_NEWSLETTER_WEBHOOK],
+        ["n8n", env.N8N_NEWSLETTER_WEBHOOK],
+      ];
+  return ordered.filter(([, url]) => Boolean(url));
+}
+
 // ------------------------------------------------- consultation form
 
 export async function handleLead(request, env) {
@@ -197,8 +228,9 @@ export async function handleLead(request, env) {
 // ------------------------------------------------------ newsletter popup
 
 export async function handleSubscribe(request, env) {
-  if (!env.MAKE_NEWSLETTER_WEBHOOK) {
-    console.error("[form-proxy] MAKE_NEWSLETTER_WEBHOOK not configured");
+  const targets = newsletterTargets(env);
+  if (!targets.length) {
+    console.error("[form-proxy] no newsletter webhook configured");
     return json({ ok: false, error: "Server configuration error" }, 500);
   }
   if (!originAllowed(request)) return json({ ok: false, error: "Forbidden" }, 403);
@@ -226,10 +258,11 @@ export async function handleSubscribe(request, env) {
   params.append("email", email);
   params.append("source", source);
 
-  const delivered = await forward(env.MAKE_NEWSLETTER_WEBHOOK, params);
-  if (!delivered) {
-    console.error("[form-proxy] upstream rejected subscribe");
-    return json({ ok: false, error: "Upstream error" }, 502);
+  for (const [name, url] of targets) {
+    if (await forward(url, params)) return json({ ok: true });
+    console.error("[form-proxy] subscribe target failed", { target: name });
   }
-  return json({ ok: true });
+
+  console.error("[form-proxy] every subscribe target failed");
+  return json({ ok: false, error: "Upstream error" }, 502);
 }
